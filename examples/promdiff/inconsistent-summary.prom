@@ -1,0 +1,5 @@
+# TYPE s summary
+s{quantile="0.5"} 1
+s{quantile="0.50"} 2
+s_sum 3
+s_count 2

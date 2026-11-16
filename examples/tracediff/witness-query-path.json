@@ -1,0 +1,12 @@
+[
+  {
+    "service": "shop",
+    "operation": "checkout",
+    "kind": "server"
+  },
+  {
+    "service": "database",
+    "operation": "query",
+    "kind": "client"
+  }
+]

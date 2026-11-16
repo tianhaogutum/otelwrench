@@ -1,0 +1,7 @@
+{
+  "countGate": {
+    "maxChangePercent": 0,
+    "maxChangeCount": 10,
+    "minSamples": 20
+  }
+}

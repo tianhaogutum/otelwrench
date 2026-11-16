@@ -1,0 +1,10 @@
+{
+  "countGate": {
+    "maxChangePercent": 20,
+    "minSamples": 20
+  },
+  "errorFractionGate": {
+    "maxIncreasePercent": 50,
+    "minSamples": 20
+  }
+}

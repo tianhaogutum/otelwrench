@@ -1,0 +1,9 @@
+{
+  "resourceMetrics": [{"scopeMetrics": [{"metrics": [
+    {"name": "a.b", "gauge": {"dataPoints": [{"asInt": "1", "attributes": [
+      {"key": "host.name", "value": {"stringValue": "synthetic-a"}},
+      {"key": "host_name", "value": {"stringValue": "synthetic-b"}}
+    ]}]}},
+    {"name": "a_b", "gauge": {"dataPoints": [{"asInt": "2"}]}}
+  ]}]}]
+}

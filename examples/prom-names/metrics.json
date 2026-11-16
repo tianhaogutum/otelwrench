@@ -1,0 +1,18 @@
+{
+  "resourceMetrics": [{
+    "resource": {"attributes": [{"key": "service.name", "value": {"stringValue": "synthetic-shop"}}]},
+    "scopeMetrics": [{
+      "scope": {"name": "synthetic-fixture", "version": "1.0"},
+      "metrics": [
+        {"name": "requests", "unit": "1", "description": "Synthetic request count", "sum": {
+          "aggregationTemporality": 2, "isMonotonic": true,
+          "dataPoints": [{"asInt": "7", "timeUnixNano": "1794420000000000000", "attributes": [{"key": "route", "value": {"stringValue": "/cart"}}]}]
+        }},
+        {"name": "request.duration", "unit": "ms", "gauge": {"dataPoints": [{"asDouble": 12.5, "attributes": [{"key": "route", "value": {"stringValue": "/cart"}}]}]}},
+        {"name": "memory.used", "unit": "By", "gauge": {"dataPoints": [{"asInt": "4096"}]}},
+        {"name": "queue.load", "unit": "1", "gauge": {"dataPoints": [{"asDouble": 0.25}]}},
+        {"name": "active.sessions", "sum": {"aggregationTemporality": 2, "isMonotonic": false, "dataPoints": [{"asInt": "3"}]}}
+      ]
+    }]
+  }]
+}

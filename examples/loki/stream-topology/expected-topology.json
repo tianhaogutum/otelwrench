@@ -1,0 +1,25 @@
+{
+  "before": [
+    {"stream": {"route_old": "x"}, "recordIds": ["resourceLogs[0].scopeLogs[0].logRecords[0]", "resourceLogs[1].scopeLogs[0].logRecords[0]"], "recordCount": 2},
+    {"stream": {"route_old": "y"}, "recordIds": ["resourceLogs[2].scopeLogs[0].logRecords[0]", "resourceLogs[3].scopeLogs[0].logRecords[0]"], "recordCount": 2}
+  ],
+  "after": [
+    {"stream": {"route_new": "u"}, "recordIds": ["resourceLogs[0].scopeLogs[0].logRecords[0]", "resourceLogs[2].scopeLogs[0].logRecords[0]"], "recordCount": 2},
+    {"stream": {"route_new": "v"}, "recordIds": ["resourceLogs[1].scopeLogs[0].logRecords[0]", "resourceLogs[3].scopeLogs[0].logRecords[0]"], "recordCount": 2}
+  ],
+  "transitions": [
+    {"beforeStreamIndex": 0, "afterStreamIndex": 0, "recordIds": ["resourceLogs[0].scopeLogs[0].logRecords[0]"], "recordCount": 1},
+    {"beforeStreamIndex": 0, "afterStreamIndex": 1, "recordIds": ["resourceLogs[1].scopeLogs[0].logRecords[0]"], "recordCount": 1},
+    {"beforeStreamIndex": 1, "afterStreamIndex": 0, "recordIds": ["resourceLogs[2].scopeLogs[0].logRecords[0]"], "recordCount": 1},
+    {"beforeStreamIndex": 1, "afterStreamIndex": 1, "recordIds": ["resourceLogs[3].scopeLogs[0].logRecords[0]"], "recordCount": 1}
+  ],
+  "merges": [
+    {"afterStreamIndex": 0, "beforeStreamIndexes": [0, 1]},
+    {"afterStreamIndex": 1, "beforeStreamIndexes": [0, 1]}
+  ],
+  "splits": [
+    {"beforeStreamIndex": 0, "afterStreamIndexes": [0, 1]},
+    {"beforeStreamIndex": 1, "afterStreamIndexes": [0, 1]}
+  ],
+  "membershipChanged": true
+}

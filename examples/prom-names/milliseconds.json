@@ -1,0 +1,19 @@
+{
+  "resourceMetrics": [{
+    "scopeMetrics": [{
+      "metrics": [
+        {"name": "latency", "unit": "ms", "gauge": {"dataPoints": [
+          {"asInt": "1250", "attributes": [{"key": "kind", "value": {"stringValue": "integer"}}]},
+          {"asDouble": 0.100000000000000000001, "attributes": [{"key": "kind", "value": {"stringValue": "decimal"}}]}
+        ]}},
+        {"name": "elapsed_milliseconds_total", "unit": "ms", "sum": {
+          "aggregationTemporality": 2, "isMonotonic": true,
+          "dataPoints": [{"asInt": "9223372036854775807"}]
+        }},
+        {"name": "payload", "unit": "By", "gauge": {"dataPoints": [{"asInt": "4096"}]}},
+        {"name": "ready", "unit": "1", "gauge": {"dataPoints": [{"asInt": "1"}]}},
+        {"name": "uptime", "unit": "s", "gauge": {"dataPoints": [{"asInt": "2"}]}}
+      ]
+    }]
+  }]
+}

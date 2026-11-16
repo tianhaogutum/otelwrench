@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "matrix",
+    "result": [{
+      "metric": { "__name__": "synthetic_load", "instance": "a" },
+      "values": [[0, "2"], [60, "2"], [120, "0"], [240, "2"], [300, "2"], [360, "0"], [420, "2"]]
+    }]
+  },
+  "warnings": ["Synthetic fixture; t=180 intentionally absent."],
+  "infos": ["Finite capture; no production or statistical inference."]
+}

@@ -1,0 +1,6 @@
+{
+  "absoluteP95Ms": 20,
+  "relativeP95Percent": 20,
+  "minSamples": 20,
+  "failOnStructure": false
+}

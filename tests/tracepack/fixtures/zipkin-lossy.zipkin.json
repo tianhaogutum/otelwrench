@@ -1,0 +1,12 @@
+[
+  {
+    "traceId": "abcdef0123456789abcdef0123456789",
+    "id": "1111111111111111",
+    "name": "request",
+    "timestamp": 1700000000000000,
+    "duration": 1,
+    "localEndpoint": {"serviceName": "web"},
+    "tags": {"route": "/checkout"},
+    "annotations": [{"timestamp": 1700000000000001, "value": "tick"}]
+  }
+]

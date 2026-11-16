@@ -1,0 +1,9 @@
+{
+  "evaluationInterval": "60s",
+  "threshold": { "op": ">", "value": 1 },
+  "for": "0s",
+  "keep_firing_for": "0s",
+  "missingData": "error",
+  "start": 0,
+  "end": 1140
+}

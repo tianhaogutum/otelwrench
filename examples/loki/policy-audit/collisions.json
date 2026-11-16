@@ -1,0 +1,52 @@
+{
+  "resourceLogs": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "checkout"
+            }
+          },
+          {
+            "key": "shared.key",
+            "value": {
+              "stringValue": "resource"
+            }
+          }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "scope": {
+            "attributes": [
+              {
+                "key": "shared_key",
+                "value": {
+                  "stringValue": "scope"
+                }
+              }
+            ]
+          },
+          "logRecords": [
+            {
+              "timeUnixNano": "1700000000000000001",
+              "body": {
+                "stringValue": "order 1 accepted"
+              },
+              "attributes": [
+                {
+                  "key": "shared-key",
+                  "value": {
+                    "stringValue": "log"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

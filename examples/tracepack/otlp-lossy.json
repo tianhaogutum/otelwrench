@@ -1,0 +1,13 @@
+{
+  "resourceSpans": [{
+    "resource": {"attributes": [{"key": "service.name", "value": {"stringValue": "synthetic-worker"}}]},
+    "scopeSpans": [{"spans": [{
+      "traceId": "11111111111111111111111111111111",
+      "spanId": "2222222222222222",
+      "name": "precise operation",
+      "startTimeUnixNano": "1700000000000000001",
+      "endTimeUnixNano": "1700000000001200002",
+      "traceState": "vendor=value"
+    }]}]
+  }]
+}

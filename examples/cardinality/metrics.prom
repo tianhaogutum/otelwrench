@@ -1,0 +1,9 @@
+# HELP requests_total Synthetic requests by route and pod.
+# TYPE requests_total counter
+requests_total{pod="a",route="/",debug_id="d1"} 2
+requests_total{pod="b",route="/",debug_id="d2"} 4
+requests_total{pod="a",route="/health",debug_id="d3"} 3
+# HELP temperature_celsius Synthetic room temperature.
+# TYPE temperature_celsius gauge
+temperature_celsius{room="north",debug_id="t1"} 20.5
+temperature_celsius{room="south",debug_id="t2"} 21

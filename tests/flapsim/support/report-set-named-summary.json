@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "command": "compare-report-set",
+  "deltaConvention": "candidate minus baseline; null delay if either never fires",
+  "budget": {
+    "maxReports": 256,
+    "reports": 3,
+    "candidates": 2,
+    "maxEvaluations": 1000000,
+    "requiredEvaluations": 42
+  },
+  "baseline": {
+    "schemaVersion": 1,
+    "command": "replay-summary",
+    "config": {
+      "evaluationIntervalSeconds": 0.06,
+      "threshold": {
+        "op": ">",
+        "value": 1
+      },
+      "forSeconds": 0.06,
+      "keepFiringForSeconds": 0,
+      "missingData": "false"
+    },
+    "exactConfig": {
+      "evaluationInterval": "60ms",
+      "threshold": {
+        "op": ">",
+        "value": 1
+      },
+      "for": "60ms",
+      "keep_firing_for": "0ms",
+      "missingData": "false"
+    },
+    "ruleIdentity": {
+      "schemaVersion": 1,
+      "algorithm": "sha256",
+      "encoding": "alert-flapsim-rule-v1",
+      "digest": "64c8e97e1cf98d32674fcb0c3deb1306d9992b52613705c20e76e1d9f0ebc61e"
+    },
+    "window": {
+      "start": 1.001,
+      "end": 1.361,
+      "evaluations": 7,
+      "rangeSource": "config"
+    },
+    "origin": {
+      "originStart": 1.001,
+      "evaluatedThrough": 1.361
+    },
+    "assumptions": [
+      "Each label set starts inactive; pre-capture alert state is unknown.",
+      "Firing duration is observed exposure in [start,end); the final evaluation adds no duration. Open episodes are right-censored.",
+      "No interpolation or lookback: absent grid samples follow missingData. JSON NaN is numeric NaN, not a distinguishable stale marker.",
+      "Labels (including __name__) are preserved; no PromQL, alert label rewriting or Alertmanager behavior is simulated."
+    ],
+    "sourceWarnings": [],
+    "sourceInfos": [],
+    "summary": {
+      "series": 2,
+      "firstFiring": 1.121,
+      "firingDurationSeconds": 0.12,
+      "firingEpisodes": 2,
+      "resolutions": 2,
+      "openAtEnd": 0,
+      "pendingAtEnd": 0,
+      "missingSamples": 0,
+      "nanSamples": 0,
+      "heldEvaluations": 0,
+      "transitionCount": 8,
+      "censoredEpisodes": 0
+    },
+    "series": [
+      {
+        "id": "[[\"instance\",\"a\"]]",
+        "labels": {
+          "instance": "a"
+        },
+        "summary": {
+          "firstFiring": 1.121,
+          "firingDurationSeconds": 0.12,
+          "firingEpisodes": 2,
+          "resolutions": 2,
+          "openAtEnd": false,
+          "pendingAtEnd": false,
+          "missingSamples": 0,
+          "nanSamples": 0,
+          "heldEvaluations": 0,
+          "transitionCount": 6,
+          "censoredEpisodes": 0
+        }
+      },
+      {
+        "id": "[[\"instance\",\"b\"]]",
+        "labels": {
+          "instance": "b"
+        },
+        "summary": {
+          "firstFiring": null,
+          "firingDurationSeconds": 0,
+          "firingEpisodes": 0,
+          "resolutions": 0,
+          "openAtEnd": false,
+          "pendingAtEnd": false,
+          "missingSamples": 0,
+          "nanSamples": 0,
+          "heldEvaluations": 0,
+          "transitionCount": 2,
+          "censoredEpisodes": 0
+        }
+      }
+    ],
+    "displayName": "基準,\"é\"\nline\r\n🙂"
+  },
+  "candidates": [
+    {
+      "candidateIndex": 0,
+      "report": {
+        "schemaVersion": 1,
+        "command": "replay-summary",
+        "config": {
+          "evaluationIntervalSeconds": 0.06,
+          "threshold": {
+            "op": ">=",
+            "value": 2
+          },
+          "forSeconds": 0,
+          "keepFiringForSeconds": 0.12,
+          "missingData": "error"
+        },
+        "exactConfig": {
+          "evaluationInterval": "60ms",
+          "threshold": {
+            "op": ">=",
+            "value": 2
+          },
+          "for": "0ms",
+          "keep_firing_for": "120ms",
+          "missingData": "error"
+        },
+        "ruleIdentity": {
+          "schemaVersion": 1,
+          "algorithm": "sha256",
+          "encoding": "alert-flapsim-rule-v1",
+          "digest": "ccbce01d6a70570efbbb068f0956e1e96d89e2f1b55ac873b2c478482fa94f09"
+        },
+        "window": {
+          "start": 1.001,
+          "end": 1.361,
+          "evaluations": 7,
+          "rangeSource": "config"
+        },
+        "origin": {
+          "originStart": 1.001,
+          "evaluatedThrough": 1.361
+        },
+        "assumptions": [
+          "Each label set starts inactive; pre-capture alert state is unknown.",
+          "Firing duration is observed exposure in [start,end); the final evaluation adds no duration. Open episodes are right-censored.",
+          "No interpolation or lookback: absent grid samples follow missingData. JSON NaN is numeric NaN, not a distinguishable stale marker.",
+          "Labels (including __name__) are preserved; no PromQL, alert label rewriting or Alertmanager behavior is simulated."
+        ],
+        "sourceWarnings": [],
+        "sourceInfos": [],
+        "summary": {
+          "series": 2,
+          "firstFiring": 1.061,
+          "firingDurationSeconds": 0.48,
+          "firingEpisodes": 2,
+          "resolutions": 1,
+          "openAtEnd": 1,
+          "pendingAtEnd": 0,
+          "missingSamples": 0,
+          "nanSamples": 0,
+          "heldEvaluations": 4,
+          "transitionCount": 3,
+          "censoredEpisodes": 1
+        },
+        "series": [
+          {
+            "id": "[[\"instance\",\"a\"]]",
+            "labels": {
+              "instance": "a"
+            },
+            "summary": {
+              "firstFiring": 1.061,
+              "firingDurationSeconds": 0.3,
+              "firingEpisodes": 1,
+              "resolutions": 0,
+              "openAtEnd": true,
+              "pendingAtEnd": false,
+              "missingSamples": 0,
+              "nanSamples": 0,
+              "heldEvaluations": 2,
+              "transitionCount": 1,
+              "censoredEpisodes": 1
+            }
+          },
+          {
+            "id": "[[\"instance\",\"b\"]]",
+            "labels": {
+              "instance": "b"
+            },
+            "summary": {
+              "firstFiring": 1.061,
+              "firingDurationSeconds": 0.18,
+              "firingEpisodes": 1,
+              "resolutions": 1,
+              "openAtEnd": false,
+              "pendingAtEnd": false,
+              "missingSamples": 0,
+              "nanSamples": 0,
+              "heldEvaluations": 2,
+              "transitionCount": 2,
+              "censoredEpisodes": 0
+            }
+          }
+        ]
+      },
+      "delta": {
+        "firstFiringDelaySeconds": -0.06,
+        "firingDurationSeconds": 0.36,
+        "firingEpisodes": 0,
+        "resolutions": -1,
+        "openAtEnd": 1,
+        "pendingAtEnd": 0,
+        "transitionCount": -5,
+        "censoredEpisodes": 1
+      },
+      "seriesDeltas": [
+        {
+          "id": "[[\"instance\",\"a\"]]",
+          "labels": {
+            "instance": "a"
+          },
+          "firstFiringDelaySeconds": -0.06,
+          "firingDurationSeconds": 0.18,
+          "firingEpisodes": -1,
+          "resolutions": -2,
+          "openAtEnd": 1,
+          "pendingAtEnd": 0,
+          "transitionCount": -5,
+          "censoredEpisodes": 1
+        },
+        {
+          "id": "[[\"instance\",\"b\"]]",
+          "labels": {
+            "instance": "b"
+          },
+          "firstFiringDelaySeconds": null,
+          "firingDurationSeconds": 0.18,
+          "firingEpisodes": 1,
+          "resolutions": 1,
+          "openAtEnd": 0,
+          "pendingAtEnd": 0,
+          "transitionCount": 0,
+          "censoredEpisodes": 0
+        }
+      ],
+      "displayName": "candidate, \"β\"\nnext"
+    },
+    {
+      "candidateIndex": 1,
+      "report": {
+        "schemaVersion": 1,
+        "command": "replay-summary",
+        "config": {
+          "evaluationIntervalSeconds": 0.06,
+          "threshold": {
+            "op": ">",
+            "value": 3
+          },
+          "forSeconds": 0.12,
+          "keepFiringForSeconds": 0.06,
+          "missingData": "false"
+        },
+        "exactConfig": {
+          "evaluationInterval": "60ms",
+          "threshold": {
+            "op": ">",
+            "value": 3
+          },
+          "for": "120ms",
+          "keep_firing_for": "60ms",
+          "missingData": "false"
+        },
+        "ruleIdentity": {
+          "schemaVersion": 1,
+          "algorithm": "sha256",
+          "encoding": "alert-flapsim-rule-v1",
+          "digest": "83f035a63c2e079be7d18ec5551d8c1baa5cba03c661d1a8ff89c8c6e305b31f"
+        },
+        "window": {
+          "start": 1.001,
+          "end": 1.361,
+          "evaluations": 7,
+          "rangeSource": "config"
+        },
+        "origin": {
+          "originStart": 1.001,
+          "evaluatedThrough": 1.361
+        },
+        "assumptions": [
+          "Each label set starts inactive; pre-capture alert state is unknown.",
+          "Firing duration is observed exposure in [start,end); the final evaluation adds no duration. Open episodes are right-censored.",
+          "No interpolation or lookback: absent grid samples follow missingData. JSON NaN is numeric NaN, not a distinguishable stale marker.",
+          "Labels (including __name__) are preserved; no PromQL, alert label rewriting or Alertmanager behavior is simulated."
+        ],
+        "sourceWarnings": [],
+        "sourceInfos": [],
+        "summary": {
+          "series": 2,
+          "firstFiring": null,
+          "firingDurationSeconds": 0,
+          "firingEpisodes": 0,
+          "resolutions": 0,
+          "openAtEnd": 0,
+          "pendingAtEnd": 0,
+          "missingSamples": 0,
+          "nanSamples": 0,
+          "heldEvaluations": 0,
+          "transitionCount": 0,
+          "censoredEpisodes": 0
+        },
+        "series": [
+          {
+            "id": "[[\"instance\",\"a\"]]",
+            "labels": {
+              "instance": "a"
+            },
+            "summary": {
+              "firstFiring": null,
+              "firingDurationSeconds": 0,
+              "firingEpisodes": 0,
+              "resolutions": 0,
+              "openAtEnd": false,
+              "pendingAtEnd": false,
+              "missingSamples": 0,
+              "nanSamples": 0,
+              "heldEvaluations": 0,
+              "transitionCount": 0,
+              "censoredEpisodes": 0
+            }
+          },
+          {
+            "id": "[[\"instance\",\"b\"]]",
+            "labels": {
+              "instance": "b"
+            },
+            "summary": {
+              "firstFiring": null,
+              "firingDurationSeconds": 0,
+              "firingEpisodes": 0,
+              "resolutions": 0,
+              "openAtEnd": false,
+              "pendingAtEnd": false,
+              "missingSamples": 0,
+              "nanSamples": 0,
+              "heldEvaluations": 0,
+              "transitionCount": 0,
+              "censoredEpisodes": 0
+            }
+          }
+        ]
+      },
+      "delta": {
+        "firstFiringDelaySeconds": null,
+        "firingDurationSeconds": -0.12,
+        "firingEpisodes": -2,
+        "resolutions": -2,
+        "openAtEnd": 0,
+        "pendingAtEnd": 0,
+        "transitionCount": -8,
+        "censoredEpisodes": 0
+      },
+      "seriesDeltas": [
+        {
+          "id": "[[\"instance\",\"a\"]]",
+          "labels": {
+            "instance": "a"
+          },
+          "firstFiringDelaySeconds": null,
+          "firingDurationSeconds": -0.12,
+          "firingEpisodes": -2,
+          "resolutions": -2,
+          "openAtEnd": 0,
+          "pendingAtEnd": 0,
+          "transitionCount": -6,
+          "censoredEpisodes": 0
+        },
+        {
+          "id": "[[\"instance\",\"b\"]]",
+          "labels": {
+            "instance": "b"
+          },
+          "firstFiringDelaySeconds": null,
+          "firingDurationSeconds": 0,
+          "firingEpisodes": 0,
+          "resolutions": 0,
+          "openAtEnd": 0,
+          "pendingAtEnd": 0,
+          "transitionCount": -2,
+          "censoredEpisodes": 0
+        }
+      ],
+      "displayName": "é/é\r終"
+    }
+  ],
+  "detail": "summary",
+  "captureIdentity": {
+    "schemaVersion": 1,
+    "algorithm": "sha256",
+    "encoding": "alert-flapsim-capture-v1",
+    "digest": "739e91c4e92fc7b2aba345466f0408fb2c66541f5764fafa8f95543875062dfe"
+  }
+}

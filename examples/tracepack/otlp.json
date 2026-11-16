@@ -1,0 +1,31 @@
+{
+  "resourceSpans": [
+    {
+      "resource": {"attributes": [{"key": "service.name", "value": {"stringValue": "db"}}]},
+      "scopeSpans": [{"spans": [{
+        "traceId": "abcdef0123456789abcdef0123456789",
+        "spanId": "2222222222222222",
+        "parentSpanId": "1111111111111111",
+        "name": "SELECT", "kind": 3,
+        "startTimeUnixNano": "1700000000000200000",
+        "endTimeUnixNano": "1700000000001100000",
+        "attributes": [{"key": "error", "value": {"stringValue": "timeout"}}],
+        "events": [{"timeUnixNano": "1700000000000800000", "name": "retry", "attributes": []}],
+        "status": {"code": 2, "message": ""}
+      }]}]
+    },
+    {
+      "resource": {"attributes": [{"key": "service.name", "value": {"stringValue": "web"}}]},
+      "scopeSpans": [{"spans": [{
+        "traceId": "abcdef0123456789abcdef0123456789",
+        "spanId": "1111111111111111",
+        "name": "GET /checkout", "kind": 2,
+        "startTimeUnixNano": "1700000000000000000",
+        "endTimeUnixNano": "1700000000001200000",
+        "attributes": [{"key": "http.method", "value": {"stringValue": "GET"}}],
+        "events": [{"timeUnixNano": "1700000000000100000", "name": "received", "attributes": []}],
+        "status": {"code": 0, "message": ""}
+      }]}]
+    }
+  ]
+}

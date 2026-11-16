@@ -1,0 +1,11 @@
+{
+  "streams": [
+    {
+      "stream": {"service_name": "checkout"},
+      "values": [
+        ["1700000000000000001", "order 1 accepted", {"component": "payment", "k8s_pod_name": "p1", "order_id": "42", "scope_name": "example.checkout", "scope_version": "1.0"}],
+        ["1700000000000000002", "order 2 accepted", {"component": "payment", "k8s_pod_name": "p2", "order_id": "43", "scope_name": "example.checkout", "scope_version": "1.0"}]
+      ]
+    }
+  ]
+}

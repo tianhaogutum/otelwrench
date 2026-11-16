@@ -1,0 +1,44 @@
+{
+  "experiment": "synthetic-corpus-mutation-v1",
+  "traceCount": 20,
+  "baselineSpanCount": 40,
+  "policy": {
+    "absoluteP95Ms": 20,
+    "relativeP95Percent": 20,
+    "minSamples": 20,
+    "failOnStructure": false
+  },
+  "baselineMethod": "JSON.stringify equality (detects ID/order/format noise)",
+  "method": "CLI output checked against direct wire-format counts and independently ranked integer durations",
+  "cases": [
+    {
+      "candidate": "renamed.json",
+      "rawJsonChanged": true,
+      "normalizedStructuralChanges": 0,
+      "latencyRegressions": 0,
+      "exitCode": 0
+    },
+    {
+      "candidate": "compatible.json",
+      "rawJsonChanged": true,
+      "normalizedStructuralChanges": 0,
+      "latencyRegressions": 0,
+      "exitCode": 0
+    },
+    {
+      "candidate": "regression.json",
+      "rawJsonChanged": true,
+      "normalizedStructuralChanges": 2,
+      "latencyRegressions": 1,
+      "checkoutP95Ms": {
+        "baseline": 100,
+        "candidate": 150,
+        "delta": 50,
+        "relativePercent": 50
+      },
+      "exitCode": 1
+    }
+  ],
+  "verified": true,
+  "performanceClaim": "None: this measures comparison behavior, not runtime speed or production latency improvement."
+}

@@ -1,0 +1,13 @@
+{
+  "resourceSpans": [{
+    "resource": {"attributes": [{"key": "service.name", "value": {"stringValue": "web"}}]},
+    "scopeSpans": [{"spans": [{
+      "traceId": "abcdef0123456789abcdef0123456789",
+      "spanId": "1111111111111111",
+      "name": "request",
+      "startTimeUnixNano": "1700000000000000000",
+      "endTimeUnixNano": "1700000000001000000",
+      "status": {"code": 2, "message": "upstream timeout"}
+    }]}]
+  }]
+}

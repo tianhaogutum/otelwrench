@@ -1,0 +1,124 @@
+{}
+{"type":"transaction","length":666}
+{
+  "type": "transaction",
+  "transaction": "checkout",
+  "release": "shop@1",
+  "start_timestamp": 1,
+  "timestamp": 2,
+  "contexts": {
+    "trace": {
+      "trace_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "span_id": "1111111111111111"
+    }
+  },
+  "spans": [
+    {
+      "trace_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "span_id": "2222222222222222",
+      "parent_span_id": "1111111111111111",
+      "op": "db.query",
+      "start_timestamp": 1,
+      "timestamp": 2
+    },
+    {
+      "trace_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "span_id": "3333333333333333",
+      "op": "custom",
+      "start_timestamp": 1,
+      "timestamp": 2
+    }
+  ]
+}
+{"type":"transaction","length":253}
+{
+  "type": "transaction",
+  "transaction": "checkout",
+  "release": "shop@1",
+  "start_timestamp": 1,
+  "timestamp": 2,
+  "contexts": {
+    "trace": {
+      "trace_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "span_id": "1111111111111111"
+    }
+  }
+}
+{"type":"transaction","length":265}
+{
+  "type": "transaction",
+  "transaction": "different definition",
+  "release": "shop@1",
+  "start_timestamp": 1,
+  "timestamp": 2,
+  "contexts": {
+    "trace": {
+      "trace_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "span_id": "2222222222222222"
+    }
+  }
+}
+{"type":"transaction","length":297}
+{
+  "type": "transaction",
+  "transaction": "checkout",
+  "release": "shop@1",
+  "start_timestamp": 1,
+  "timestamp": 2,
+  "contexts": {
+    "trace": {
+      "trace_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "span_id": "4444444444444444",
+      "parent_span_id": "2222222222222222"
+    }
+  }
+}
+{"type":"transaction","length":297}
+{
+  "type": "transaction",
+  "transaction": "checkout",
+  "release": "shop@1",
+  "start_timestamp": 1,
+  "timestamp": 2,
+  "contexts": {
+    "trace": {
+      "trace_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "span_id": "5555555555555555",
+      "parent_span_id": "9999999999999999"
+    }
+  }
+}
+{"type":"transaction","length":297}
+{
+  "type": "transaction",
+  "transaction": "checkout",
+  "release": "shop@1",
+  "start_timestamp": 1,
+  "timestamp": 2,
+  "contexts": {
+    "trace": {
+      "trace_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "span_id": "6666666666666666",
+      "parent_span_id": "1111111111111111"
+    }
+  }
+}
+{"type":"transaction","length":263}
+{
+  "type": "transaction",
+  "transaction": "independent",
+  "release": "independent@2",
+  "start_timestamp": 1,
+  "timestamp": 2,
+  "contexts": {
+    "trace": {
+      "trace_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "span_id": "7777777777777777"
+    }
+  }
+}
+{"type":"event","length":54}
+{
+  "message": "uncorrelated",
+  "release": "shop@1"
+}

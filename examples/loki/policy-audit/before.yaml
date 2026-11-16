@@ -1,0 +1,8 @@
+# Explicit policy: index service and pod; retain other attributes as metadata.
+limits_config:
+  otlp_config:
+    resource_attributes:
+      ignore_defaults: true
+      attributes_config:
+        - action: index_label
+          attributes: [service.name, k8s.pod.name, shared.key]

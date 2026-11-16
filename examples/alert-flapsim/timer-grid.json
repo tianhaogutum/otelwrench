@@ -1,0 +1,5 @@
+{
+  "for": ["0s", "60s"],
+  "keep_firing_for": ["0s", "120s"],
+  "maxEvaluations": 40
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "scrapes": [
+    {
+      "id": "a",
+      "source": "exporter",
+      "captured_at": "2026-11-11T08:00:00Z",
+      "path": "exporter.prom",
+      "target_labels": {"job": "api", "instance": "a"}
+    },
+    {
+      "id": "b",
+      "source": "exporter",
+      "captured_at": "2026-11-11T08:00:00Z",
+      "path": "exporter.prom",
+      "target_labels": {"job": "api", "instance": "b"}
+    }
+  ]
+}

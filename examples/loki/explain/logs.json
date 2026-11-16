@@ -1,0 +1,25 @@
+{
+  "resourceLogs": [{
+    "resource": {"attributes": [
+      {"key": "service.name", "value": {"stringValue": "checkout"}},
+      {"key": "k8s.pod.name", "value": {"stringValue": "p1"}}
+    ]},
+    "scopeLogs": [{
+      "scope": {"name": "example.checkout", "attributes": [
+        {"key": "internal.component", "value": {"stringValue": "SYNTHETIC-ONLY"}}
+      ]},
+      "logRecords": [{
+        "timeUnixNano": "1700000000000000001",
+        "body": {"stringValue": "synthetic explain example"},
+        "attributes": [
+          {"key": "net.peer", "value": {"kvlistValue": {"values": [
+            {"key": "port", "value": {"intValue": "443"}},
+            {"key": "host", "value": {"stringValue": "example.invalid"}}
+          ]}}},
+          {"key": "debug.private.value", "value": {"stringValue": "SYNTHETIC-ONLY"}},
+          {"key": "empty", "value": {}}
+        ]
+      }]
+    }]
+  }]
+}

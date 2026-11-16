@@ -1,0 +1,5026 @@
+{
+  "resourceSpans": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "synthetic-shop"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "tailsim-experiment",
+            "version": "1"
+          },
+          "spans": [
+            {
+              "traceId": "00000000000000000000000000000001",
+              "spanId": "0000000000000002",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000001000000000",
+              "endTimeUnixNano": "1700000001010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000001",
+              "spanId": "0000000000000003",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000001000000000",
+              "endTimeUnixNano": "1700000001010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000002",
+              "spanId": "0000000000000004",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000002000000000",
+              "endTimeUnixNano": "1700000002010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000002",
+              "spanId": "0000000000000005",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000002000000000",
+              "endTimeUnixNano": "1700000002010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000003",
+              "spanId": "0000000000000006",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000003000000000",
+              "endTimeUnixNano": "1700000003010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000003",
+              "spanId": "0000000000000007",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000003000000000",
+              "endTimeUnixNano": "1700000003010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000004",
+              "spanId": "0000000000000008",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000004000000000",
+              "endTimeUnixNano": "1700000004010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000004",
+              "spanId": "0000000000000009",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000004000000000",
+              "endTimeUnixNano": "1700000004600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000005",
+              "spanId": "000000000000000a",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000005000000000",
+              "endTimeUnixNano": "1700000005010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000005",
+              "spanId": "000000000000000b",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000005000000000",
+              "endTimeUnixNano": "1700000005010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000006",
+              "spanId": "000000000000000c",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000006000000000",
+              "endTimeUnixNano": "1700000006010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000006",
+              "spanId": "000000000000000d",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000006000000000",
+              "endTimeUnixNano": "1700000006010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000007",
+              "spanId": "000000000000000e",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000007000000000",
+              "endTimeUnixNano": "1700000007010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000007",
+              "spanId": "000000000000000f",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000007000000000",
+              "endTimeUnixNano": "1700000007010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000008",
+              "spanId": "0000000000000010",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000008000000000",
+              "endTimeUnixNano": "1700000008010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000008",
+              "spanId": "0000000000000011",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000008000000000",
+              "endTimeUnixNano": "1700000008600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000009",
+              "spanId": "0000000000000012",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000009000000000",
+              "endTimeUnixNano": "1700000009010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000009",
+              "spanId": "0000000000000013",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000009000000000",
+              "endTimeUnixNano": "1700000009010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000a",
+              "spanId": "0000000000000014",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000010000000000",
+              "endTimeUnixNano": "1700000010010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000a",
+              "spanId": "0000000000000015",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000010000000000",
+              "endTimeUnixNano": "1700000010010000000",
+              "status": {
+                "code": 2
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000b",
+              "spanId": "0000000000000016",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000011000000000",
+              "endTimeUnixNano": "1700000011010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000b",
+              "spanId": "0000000000000017",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000011000000000",
+              "endTimeUnixNano": "1700000011010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000c",
+              "spanId": "0000000000000018",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000012000000000",
+              "endTimeUnixNano": "1700000012010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000c",
+              "spanId": "0000000000000019",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000012000000000",
+              "endTimeUnixNano": "1700000012600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000d",
+              "spanId": "000000000000001a",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000013000000000",
+              "endTimeUnixNano": "1700000013010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000d",
+              "spanId": "000000000000001b",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000013000000000",
+              "endTimeUnixNano": "1700000013010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000e",
+              "spanId": "000000000000001c",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000014000000000",
+              "endTimeUnixNano": "1700000014010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000e",
+              "spanId": "000000000000001d",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000014000000000",
+              "endTimeUnixNano": "1700000014010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000f",
+              "spanId": "000000000000001e",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000015000000000",
+              "endTimeUnixNano": "1700000015010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000000f",
+              "spanId": "000000000000001f",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000015000000000",
+              "endTimeUnixNano": "1700000015010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000010",
+              "spanId": "0000000000000020",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000016000000000",
+              "endTimeUnixNano": "1700000016010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000010",
+              "spanId": "0000000000000021",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000016000000000",
+              "endTimeUnixNano": "1700000016600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000011",
+              "spanId": "0000000000000022",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000017000000000",
+              "endTimeUnixNano": "1700000017010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000011",
+              "spanId": "0000000000000023",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000017000000000",
+              "endTimeUnixNano": "1700000017010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000012",
+              "spanId": "0000000000000024",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000018000000000",
+              "endTimeUnixNano": "1700000018010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000012",
+              "spanId": "0000000000000025",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000018000000000",
+              "endTimeUnixNano": "1700000018010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000013",
+              "spanId": "0000000000000026",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000019000000000",
+              "endTimeUnixNano": "1700000019010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000013",
+              "spanId": "0000000000000027",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000019000000000",
+              "endTimeUnixNano": "1700000019010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000014",
+              "spanId": "0000000000000028",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000020000000000",
+              "endTimeUnixNano": "1700000020010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000014",
+              "spanId": "0000000000000029",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000020000000000",
+              "endTimeUnixNano": "1700000020600000000",
+              "status": {
+                "code": 2
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000015",
+              "spanId": "000000000000002a",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000021000000000",
+              "endTimeUnixNano": "1700000021010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000015",
+              "spanId": "000000000000002b",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000021000000000",
+              "endTimeUnixNano": "1700000021010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000016",
+              "spanId": "000000000000002c",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000022000000000",
+              "endTimeUnixNano": "1700000022010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000016",
+              "spanId": "000000000000002d",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000022000000000",
+              "endTimeUnixNano": "1700000022010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000017",
+              "spanId": "000000000000002e",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000023000000000",
+              "endTimeUnixNano": "1700000023010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000017",
+              "spanId": "000000000000002f",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000023000000000",
+              "endTimeUnixNano": "1700000023010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000018",
+              "spanId": "0000000000000030",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000024000000000",
+              "endTimeUnixNano": "1700000024010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000018",
+              "spanId": "0000000000000031",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000024000000000",
+              "endTimeUnixNano": "1700000024600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000019",
+              "spanId": "0000000000000032",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000025000000000",
+              "endTimeUnixNano": "1700000025010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/health"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000019",
+              "spanId": "0000000000000033",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000025000000000",
+              "endTimeUnixNano": "1700000025010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/health"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001a",
+              "spanId": "0000000000000034",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000026000000000",
+              "endTimeUnixNano": "1700000026010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001a",
+              "spanId": "0000000000000035",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000026000000000",
+              "endTimeUnixNano": "1700000026010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001b",
+              "spanId": "0000000000000036",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000027000000000",
+              "endTimeUnixNano": "1700000027010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001b",
+              "spanId": "0000000000000037",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000027000000000",
+              "endTimeUnixNano": "1700000027010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001c",
+              "spanId": "0000000000000038",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000028000000000",
+              "endTimeUnixNano": "1700000028010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001c",
+              "spanId": "0000000000000039",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000028000000000",
+              "endTimeUnixNano": "1700000028600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001d",
+              "spanId": "000000000000003a",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000029000000000",
+              "endTimeUnixNano": "1700000029010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001d",
+              "spanId": "000000000000003b",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000029000000000",
+              "endTimeUnixNano": "1700000029010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001e",
+              "spanId": "000000000000003c",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000030000000000",
+              "endTimeUnixNano": "1700000030010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001e",
+              "spanId": "000000000000003d",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000030000000000",
+              "endTimeUnixNano": "1700000030010000000",
+              "status": {
+                "code": 2
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001f",
+              "spanId": "000000000000003e",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000031000000000",
+              "endTimeUnixNano": "1700000031010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000001f",
+              "spanId": "000000000000003f",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000031000000000",
+              "endTimeUnixNano": "1700000031010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000020",
+              "spanId": "0000000000000040",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000032000000000",
+              "endTimeUnixNano": "1700000032010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000020",
+              "spanId": "0000000000000041",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000032000000000",
+              "endTimeUnixNano": "1700000032600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000021",
+              "spanId": "0000000000000042",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000033000000000",
+              "endTimeUnixNano": "1700000033010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000021",
+              "spanId": "0000000000000043",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000033000000000",
+              "endTimeUnixNano": "1700000033010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000022",
+              "spanId": "0000000000000044",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000034000000000",
+              "endTimeUnixNano": "1700000034010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000022",
+              "spanId": "0000000000000045",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000034000000000",
+              "endTimeUnixNano": "1700000034010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000023",
+              "spanId": "0000000000000046",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000035000000000",
+              "endTimeUnixNano": "1700000035010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000023",
+              "spanId": "0000000000000047",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000035000000000",
+              "endTimeUnixNano": "1700000035010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000024",
+              "spanId": "0000000000000048",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000036000000000",
+              "endTimeUnixNano": "1700000036010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000024",
+              "spanId": "0000000000000049",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000036000000000",
+              "endTimeUnixNano": "1700000036600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000025",
+              "spanId": "000000000000004a",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000037000000000",
+              "endTimeUnixNano": "1700000037010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000025",
+              "spanId": "000000000000004b",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000037000000000",
+              "endTimeUnixNano": "1700000037010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000026",
+              "spanId": "000000000000004c",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000038000000000",
+              "endTimeUnixNano": "1700000038010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000026",
+              "spanId": "000000000000004d",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000038000000000",
+              "endTimeUnixNano": "1700000038010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000027",
+              "spanId": "000000000000004e",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000039000000000",
+              "endTimeUnixNano": "1700000039010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000027",
+              "spanId": "000000000000004f",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000039000000000",
+              "endTimeUnixNano": "1700000039010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000028",
+              "spanId": "0000000000000050",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000040000000000",
+              "endTimeUnixNano": "1700000040010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000028",
+              "spanId": "0000000000000051",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000040000000000",
+              "endTimeUnixNano": "1700000040600000000",
+              "status": {
+                "code": 2
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000029",
+              "spanId": "0000000000000052",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000041000000000",
+              "endTimeUnixNano": "1700000041010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000029",
+              "spanId": "0000000000000053",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000041000000000",
+              "endTimeUnixNano": "1700000041010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002a",
+              "spanId": "0000000000000054",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000042000000000",
+              "endTimeUnixNano": "1700000042010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002a",
+              "spanId": "0000000000000055",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000042000000000",
+              "endTimeUnixNano": "1700000042010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002b",
+              "spanId": "0000000000000056",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000043000000000",
+              "endTimeUnixNano": "1700000043010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002b",
+              "spanId": "0000000000000057",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000043000000000",
+              "endTimeUnixNano": "1700000043010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002c",
+              "spanId": "0000000000000058",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000044000000000",
+              "endTimeUnixNano": "1700000044010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002c",
+              "spanId": "0000000000000059",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000044000000000",
+              "endTimeUnixNano": "1700000044600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002d",
+              "spanId": "000000000000005a",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000045000000000",
+              "endTimeUnixNano": "1700000045010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002d",
+              "spanId": "000000000000005b",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000045000000000",
+              "endTimeUnixNano": "1700000045010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002e",
+              "spanId": "000000000000005c",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000046000000000",
+              "endTimeUnixNano": "1700000046010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002e",
+              "spanId": "000000000000005d",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000046000000000",
+              "endTimeUnixNano": "1700000046010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002f",
+              "spanId": "000000000000005e",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000047000000000",
+              "endTimeUnixNano": "1700000047010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000002f",
+              "spanId": "000000000000005f",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000047000000000",
+              "endTimeUnixNano": "1700000047010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000030",
+              "spanId": "0000000000000060",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000048000000000",
+              "endTimeUnixNano": "1700000048010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000030",
+              "spanId": "0000000000000061",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000048000000000",
+              "endTimeUnixNano": "1700000048600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000031",
+              "spanId": "0000000000000062",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000049000000000",
+              "endTimeUnixNano": "1700000049010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000031",
+              "spanId": "0000000000000063",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000049000000000",
+              "endTimeUnixNano": "1700000049010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000032",
+              "spanId": "0000000000000064",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000050000000000",
+              "endTimeUnixNano": "1700000050010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/health"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000032",
+              "spanId": "0000000000000065",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000050000000000",
+              "endTimeUnixNano": "1700000050010000000",
+              "status": {
+                "code": 2
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/health"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000033",
+              "spanId": "0000000000000066",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000051000000000",
+              "endTimeUnixNano": "1700000051010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000033",
+              "spanId": "0000000000000067",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000051000000000",
+              "endTimeUnixNano": "1700000051010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000034",
+              "spanId": "0000000000000068",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000052000000000",
+              "endTimeUnixNano": "1700000052010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000034",
+              "spanId": "0000000000000069",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000052000000000",
+              "endTimeUnixNano": "1700000052600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000035",
+              "spanId": "000000000000006a",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000053000000000",
+              "endTimeUnixNano": "1700000053010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000035",
+              "spanId": "000000000000006b",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000053000000000",
+              "endTimeUnixNano": "1700000053010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000036",
+              "spanId": "000000000000006c",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000054000000000",
+              "endTimeUnixNano": "1700000054010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000036",
+              "spanId": "000000000000006d",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000054000000000",
+              "endTimeUnixNano": "1700000054010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000037",
+              "spanId": "000000000000006e",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000055000000000",
+              "endTimeUnixNano": "1700000055010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000037",
+              "spanId": "000000000000006f",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000055000000000",
+              "endTimeUnixNano": "1700000055010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000038",
+              "spanId": "0000000000000070",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000056000000000",
+              "endTimeUnixNano": "1700000056010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000038",
+              "spanId": "0000000000000071",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000056000000000",
+              "endTimeUnixNano": "1700000056600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000039",
+              "spanId": "0000000000000072",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000057000000000",
+              "endTimeUnixNano": "1700000057010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000039",
+              "spanId": "0000000000000073",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000057000000000",
+              "endTimeUnixNano": "1700000057010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003a",
+              "spanId": "0000000000000074",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000058000000000",
+              "endTimeUnixNano": "1700000058010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003a",
+              "spanId": "0000000000000075",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000058000000000",
+              "endTimeUnixNano": "1700000058010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003b",
+              "spanId": "0000000000000076",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000059000000000",
+              "endTimeUnixNano": "1700000059010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003b",
+              "spanId": "0000000000000077",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000059000000000",
+              "endTimeUnixNano": "1700000059010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003c",
+              "spanId": "0000000000000078",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000060000000000",
+              "endTimeUnixNano": "1700000060010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003c",
+              "spanId": "0000000000000079",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000060000000000",
+              "endTimeUnixNano": "1700000060600000000",
+              "status": {
+                "code": 2
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003d",
+              "spanId": "000000000000007a",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000061000000000",
+              "endTimeUnixNano": "1700000061010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003d",
+              "spanId": "000000000000007b",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000061000000000",
+              "endTimeUnixNano": "1700000061010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003e",
+              "spanId": "000000000000007c",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000062000000000",
+              "endTimeUnixNano": "1700000062010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003e",
+              "spanId": "000000000000007d",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000062000000000",
+              "endTimeUnixNano": "1700000062010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003f",
+              "spanId": "000000000000007e",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000063000000000",
+              "endTimeUnixNano": "1700000063010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000003f",
+              "spanId": "000000000000007f",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000063000000000",
+              "endTimeUnixNano": "1700000063010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000040",
+              "spanId": "0000000000000080",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000064000000000",
+              "endTimeUnixNano": "1700000064010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000040",
+              "spanId": "0000000000000081",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000064000000000",
+              "endTimeUnixNano": "1700000064600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000041",
+              "spanId": "0000000000000082",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000065000000000",
+              "endTimeUnixNano": "1700000065010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000041",
+              "spanId": "0000000000000083",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000065000000000",
+              "endTimeUnixNano": "1700000065010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000042",
+              "spanId": "0000000000000084",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000066000000000",
+              "endTimeUnixNano": "1700000066010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000042",
+              "spanId": "0000000000000085",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000066000000000",
+              "endTimeUnixNano": "1700000066010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000043",
+              "spanId": "0000000000000086",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000067000000000",
+              "endTimeUnixNano": "1700000067010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000043",
+              "spanId": "0000000000000087",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000067000000000",
+              "endTimeUnixNano": "1700000067010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000044",
+              "spanId": "0000000000000088",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000068000000000",
+              "endTimeUnixNano": "1700000068010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000044",
+              "spanId": "0000000000000089",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000068000000000",
+              "endTimeUnixNano": "1700000068600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000045",
+              "spanId": "000000000000008a",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000069000000000",
+              "endTimeUnixNano": "1700000069010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000045",
+              "spanId": "000000000000008b",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000069000000000",
+              "endTimeUnixNano": "1700000069010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000046",
+              "spanId": "000000000000008c",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000070000000000",
+              "endTimeUnixNano": "1700000070010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000046",
+              "spanId": "000000000000008d",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000070000000000",
+              "endTimeUnixNano": "1700000070010000000",
+              "status": {
+                "code": 2
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000047",
+              "spanId": "000000000000008e",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000071000000000",
+              "endTimeUnixNano": "1700000071010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000047",
+              "spanId": "000000000000008f",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000071000000000",
+              "endTimeUnixNano": "1700000071010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000048",
+              "spanId": "0000000000000090",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000072000000000",
+              "endTimeUnixNano": "1700000072010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000048",
+              "spanId": "0000000000000091",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000072000000000",
+              "endTimeUnixNano": "1700000072600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000049",
+              "spanId": "0000000000000092",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000073000000000",
+              "endTimeUnixNano": "1700000073010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000049",
+              "spanId": "0000000000000093",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000073000000000",
+              "endTimeUnixNano": "1700000073010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004a",
+              "spanId": "0000000000000094",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000074000000000",
+              "endTimeUnixNano": "1700000074010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004a",
+              "spanId": "0000000000000095",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000074000000000",
+              "endTimeUnixNano": "1700000074010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004b",
+              "spanId": "0000000000000096",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000075000000000",
+              "endTimeUnixNano": "1700000075010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/health"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004b",
+              "spanId": "0000000000000097",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000075000000000",
+              "endTimeUnixNano": "1700000075010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/health"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004c",
+              "spanId": "0000000000000098",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000076000000000",
+              "endTimeUnixNano": "1700000076010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004c",
+              "spanId": "0000000000000099",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000076000000000",
+              "endTimeUnixNano": "1700000076600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004d",
+              "spanId": "000000000000009a",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000077000000000",
+              "endTimeUnixNano": "1700000077010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004d",
+              "spanId": "000000000000009b",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000077000000000",
+              "endTimeUnixNano": "1700000077010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004e",
+              "spanId": "000000000000009c",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000078000000000",
+              "endTimeUnixNano": "1700000078010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004e",
+              "spanId": "000000000000009d",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000078000000000",
+              "endTimeUnixNano": "1700000078010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004f",
+              "spanId": "000000000000009e",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000079000000000",
+              "endTimeUnixNano": "1700000079010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000004f",
+              "spanId": "000000000000009f",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000079000000000",
+              "endTimeUnixNano": "1700000079010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000050",
+              "spanId": "00000000000000a0",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000080000000000",
+              "endTimeUnixNano": "1700000080010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000050",
+              "spanId": "00000000000000a1",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000080000000000",
+              "endTimeUnixNano": "1700000080600000000",
+              "status": {
+                "code": 2
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000051",
+              "spanId": "00000000000000a2",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000081000000000",
+              "endTimeUnixNano": "1700000081010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000051",
+              "spanId": "00000000000000a3",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000081000000000",
+              "endTimeUnixNano": "1700000081010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000052",
+              "spanId": "00000000000000a4",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000082000000000",
+              "endTimeUnixNano": "1700000082010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000052",
+              "spanId": "00000000000000a5",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000082000000000",
+              "endTimeUnixNano": "1700000082010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000053",
+              "spanId": "00000000000000a6",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000083000000000",
+              "endTimeUnixNano": "1700000083010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000053",
+              "spanId": "00000000000000a7",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000083000000000",
+              "endTimeUnixNano": "1700000083010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000054",
+              "spanId": "00000000000000a8",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000084000000000",
+              "endTimeUnixNano": "1700000084010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000054",
+              "spanId": "00000000000000a9",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000084000000000",
+              "endTimeUnixNano": "1700000084600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000055",
+              "spanId": "00000000000000aa",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000085000000000",
+              "endTimeUnixNano": "1700000085010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000055",
+              "spanId": "00000000000000ab",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000085000000000",
+              "endTimeUnixNano": "1700000085010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000056",
+              "spanId": "00000000000000ac",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000086000000000",
+              "endTimeUnixNano": "1700000086010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000056",
+              "spanId": "00000000000000ad",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000086000000000",
+              "endTimeUnixNano": "1700000086010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000057",
+              "spanId": "00000000000000ae",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000087000000000",
+              "endTimeUnixNano": "1700000087010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000057",
+              "spanId": "00000000000000af",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000087000000000",
+              "endTimeUnixNano": "1700000087010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000058",
+              "spanId": "00000000000000b0",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000088000000000",
+              "endTimeUnixNano": "1700000088010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000058",
+              "spanId": "00000000000000b1",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000088000000000",
+              "endTimeUnixNano": "1700000088600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000059",
+              "spanId": "00000000000000b2",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000089000000000",
+              "endTimeUnixNano": "1700000089010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000059",
+              "spanId": "00000000000000b3",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000089000000000",
+              "endTimeUnixNano": "1700000089010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005a",
+              "spanId": "00000000000000b4",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000090000000000",
+              "endTimeUnixNano": "1700000090010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005a",
+              "spanId": "00000000000000b5",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000090000000000",
+              "endTimeUnixNano": "1700000090010000000",
+              "status": {
+                "code": 2
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005b",
+              "spanId": "00000000000000b6",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000091000000000",
+              "endTimeUnixNano": "1700000091010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005b",
+              "spanId": "00000000000000b7",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000091000000000",
+              "endTimeUnixNano": "1700000091010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005c",
+              "spanId": "00000000000000b8",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000092000000000",
+              "endTimeUnixNano": "1700000092010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005c",
+              "spanId": "00000000000000b9",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000092000000000",
+              "endTimeUnixNano": "1700000092600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005d",
+              "spanId": "00000000000000ba",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000093000000000",
+              "endTimeUnixNano": "1700000093010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005d",
+              "spanId": "00000000000000bb",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000093000000000",
+              "endTimeUnixNano": "1700000093010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005e",
+              "spanId": "00000000000000bc",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000094000000000",
+              "endTimeUnixNano": "1700000094010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005e",
+              "spanId": "00000000000000bd",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000094000000000",
+              "endTimeUnixNano": "1700000094010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005f",
+              "spanId": "00000000000000be",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000095000000000",
+              "endTimeUnixNano": "1700000095010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "0000000000000000000000000000005f",
+              "spanId": "00000000000000bf",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000095000000000",
+              "endTimeUnixNano": "1700000095010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000060",
+              "spanId": "00000000000000c0",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000096000000000",
+              "endTimeUnixNano": "1700000096010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000060",
+              "spanId": "00000000000000c1",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000096000000000",
+              "endTimeUnixNano": "1700000096600000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000061",
+              "spanId": "00000000000000c2",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000097000000000",
+              "endTimeUnixNano": "1700000097010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000061",
+              "spanId": "00000000000000c3",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000097000000000",
+              "endTimeUnixNano": "1700000097010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xxxxxx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000062",
+              "spanId": "00000000000000c4",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000098000000000",
+              "endTimeUnixNano": "1700000098010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000062",
+              "spanId": "00000000000000c5",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000098000000000",
+              "endTimeUnixNano": "1700000098010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000063",
+              "spanId": "00000000000000c6",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000099000000000",
+              "endTimeUnixNano": "1700000099010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000063",
+              "spanId": "00000000000000c7",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000099000000000",
+              "endTimeUnixNano": "1700000099010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/checkout"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-x"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000064",
+              "spanId": "00000000000000c8",
+              "name": "root",
+              "kind": 2,
+              "startTimeUnixNano": "1700000100000000000",
+              "endTimeUnixNano": "1700000100010000000",
+              "status": {
+                "code": 1
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/health"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            },
+            {
+              "traceId": "00000000000000000000000000000064",
+              "spanId": "00000000000000c9",
+              "name": "child",
+              "kind": 3,
+              "startTimeUnixNano": "1700000100000000000",
+              "endTimeUnixNano": "1700000100600000000",
+              "status": {
+                "code": 2
+              },
+              "attributes": [
+                {
+                  "key": "url.path",
+                  "value": {
+                    "stringValue": "/health"
+                  }
+                },
+                {
+                  "key": "payload",
+                  "value": {
+                    "stringValue": "synthetic-λ-xx"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

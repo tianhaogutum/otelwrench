@@ -1,0 +1,16 @@
+processors:
+  tail_sampling:
+    policies:
+      - name: errors
+        type: status_code
+        status_code: {status_codes: [ERROR]}
+      - name: slow
+        type: latency
+        latency: {threshold_ms: 500}
+      - name: health-veto
+        type: drop
+        drop:
+          drop_sub_policy:
+            - name: health-path
+              type: string_attribute
+              string_attribute: {key: url.path, values: [/health]}

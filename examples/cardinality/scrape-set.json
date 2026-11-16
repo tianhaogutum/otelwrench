@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "scrapes": [
+    {"id": "morning", "source": "target-a", "captured_at": "2026-11-11T08:00:00Z", "path": "scrape-before.prom"},
+    {"id": "evening", "source": "target-a", "captured_at": "2026-11-11T18:00:00+01:00", "path": "scrape-after.prom"}
+  ]
+}

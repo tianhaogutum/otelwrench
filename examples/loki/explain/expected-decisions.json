@@ -1,0 +1,34 @@
+[
+  {
+    "sourceRef": {
+      "recordId": "resourceLogs[0].scopeLogs[0].logRecords[0]",
+      "source": "resource",
+      "sourcePath": [
+        "service.name"
+      ]
+    },
+    "key": "service_name",
+    "before": {
+      "ruleRef": "/limits_config/otlp_config/resource_attributes/attributes_config/0",
+      "placement": "structured_metadata",
+      "selector": {
+        "attributes": [
+          "service.name"
+        ]
+      }
+    },
+    "after": {
+      "ruleRef": "/limits_config/otlp_config/resource_attributes/attributes_config/1",
+      "placement": "structured_metadata",
+      "selector": {
+        "regex": "^service[.]name$"
+      }
+    },
+    "placementChanged": false,
+    "winnerChanged": true,
+    "changedFields": [
+      "ruleRef",
+      "selector"
+    ]
+  }
+]

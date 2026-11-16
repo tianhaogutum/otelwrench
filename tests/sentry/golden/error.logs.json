@@ -1,0 +1,23 @@
+{
+  "resourceLogs": [{
+    "resource": {"attributes": [
+      {"key": "service.version", "value": {"stringValue": "demo@1.0"}},
+      {"key": "deployment.environment.name", "value": {"stringValue": "synthetic"}}
+    ]},
+    "scopeLogs": [{
+      "scope": {"name": "sentry2otlp", "version": "0.1.0"},
+      "logRecords": [{
+        "attributes": [
+          {"key": "sentry.event_id", "value": {"stringValue": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},
+          {"key": "sentry.message", "value": {"stringValue": "boom"}}
+        ],
+        "timeUnixNano": "1700000000250000000",
+        "severityNumber": 17,
+        "severityText": "error",
+        "body": {"stringValue": "boom"},
+        "traceId": "11111111111111111111111111111111",
+        "spanId": "2222222222222222"
+      }]
+    }]
+  }]
+}

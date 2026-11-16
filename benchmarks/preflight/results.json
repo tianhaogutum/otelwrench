@@ -1,0 +1,115 @@
+{
+  "follow_up": {
+    "promdiff_with_rename_map": {
+      "exit": 1,
+      "failures": 4,
+      "warnings": 2
+    },
+    "promdiff_with_rename_map_and_allowlist": {
+      "exit": 0,
+      "status": "pass"
+    }
+  },
+  "inputs": "examples/preflight (synthetic, fictional service)",
+  "oracle": "examples/preflight/expected.json",
+  "preflight": {
+    "errors": 8,
+    "exit": 1,
+    "false_positives": [],
+    "findings_by_kind": {
+      "family_removed": 1,
+      "label_renamed": 1,
+      "label_schema_changed": 1,
+      "renamed": 3,
+      "series_added": 1,
+      "series_growth": 1,
+      "series_missing": 1,
+      "type_changed": 1
+    },
+    "growth_drivers": [
+      {
+        "drop_check": {
+          "collision_groups": 2,
+          "safe": false,
+          "series_after": 2,
+          "series_before": 24
+        },
+        "family": "rpc_client_calls_total",
+        "label": "net_sock_peer_port",
+        "values_after": 12,
+        "values_before": 0
+      }
+    ],
+    "label_renames_found": {
+      "http_client_requests_total": {
+        "status_code": "http_response_status_code"
+      }
+    },
+    "missed": [],
+    "queries_broken_per_oracle": 9,
+    "queries_by_kind": {
+      "alert": {
+        "hit": 3,
+        "total": 4
+      },
+      "panel": {
+        "hit": 5,
+        "total": 8
+      },
+      "record": {
+        "hit": 1,
+        "total": 2
+      }
+    },
+    "queries_flagged": 9,
+    "queries_total": 14,
+    "renames_expected": {
+      "checkout_orders": "checkout_orders_total",
+      "http_server_duration": "http_server_duration_milliseconds",
+      "queue_wait_milliseconds": "queue_wait_seconds"
+    },
+    "renames_found": {
+      "checkout_orders": "checkout_orders_total",
+      "http_server_duration": "http_server_duration_milliseconds",
+      "queue_wait_milliseconds": "queue_wait_seconds"
+    },
+    "rescaled_found": [
+      "queue_wait_milliseconds"
+    ],
+    "series": [
+      27,
+      45
+    ],
+    "true_positives": 9,
+    "warnings": 2
+  },
+  "promdiff_alone": {
+    "changes_by_kind": {
+      "family_added": 3,
+      "family_removed": 4,
+      "label_schema_changed": 2,
+      "series_added": 2,
+      "series_growth": 1,
+      "series_missing": 2,
+      "type_changed": 1
+    },
+    "exit": 1,
+    "failures": 8,
+    "families_reported_removed": [
+      "checkout_orders",
+      "http_server_duration",
+      "queue_wait_milliseconds",
+      "runtime_gc_pause_seconds"
+    ],
+    "status": "fail",
+    "warnings": 7
+  },
+  "syntax_only": {
+    "accepted": true,
+    "families_parsed": {
+      "after.prom": 7,
+      "before.prom": 8
+    },
+    "queries_flagged": 0
+  }
+}

@@ -1,0 +1,12 @@
+# HELP latency_seconds Synthetic classic histogram.
+# TYPE latency_seconds histogram
+latency_seconds_bucket{route="/",le="0.1",debug_id="b1"} 2
+latency_seconds_bucket{route="/",le="+Inf",debug_id="b2"} 3
+latency_seconds_sum{route="/",debug_id="s1"} 0.4
+latency_seconds_count{route="/",debug_id="c1"} 3
+# HELP payload_bytes Synthetic summary.
+# TYPE payload_bytes summary
+payload_bytes{quantile="0.5",region="eu",debug_id="q1"} 100
+payload_bytes{quantile="0.99",region="eu",debug_id="q2"} 200
+payload_bytes_sum{region="eu",debug_id="s2"} 300
+payload_bytes_count{region="eu",debug_id="c2"} 2

@@ -1,0 +1,6 @@
+x{a="1",b="1",debug="x",region="eu"} 1 10
+x{a="2",b="2",debug="x",region="eu"} 1.0 11
+y{a="1",debug="y",region="eu"} 2 12
+y{a="2",debug="y",region="eu"} 2 12
+z{keep="1",debug="z"} 3
+z{keep="2",debug="z"} 4

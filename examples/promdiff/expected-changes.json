@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "label_schema_changed",
+    "family": "queue_depth",
+    "before": [{"name": "queue_depth", "label_keys": ["queue"]}],
+    "after": [{"name": "queue_depth", "label_keys": ["queue", "region"]}]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "schema_version": 2,
+  "candidates": [
+    {"name": "Safe pod", "drop_labels": ["pod"], "metrics": ["safe_metric"]},
+    {"name": "Risky pod", "drop_labels": ["pod"], "metrics": ["risky_metric"]},
+    {"name": "Both pods", "drop_labels": ["pod"], "metrics": ["risky_metric", "safe_metric"]},
+    {"name": "Safe debug", "drop_labels": ["debug"], "metrics": ["safe_metric"]},
+    {"name": "Risky debug", "drop_labels": ["debug"], "metrics": ["risky_metric"]},
+    {"name": "Safe pair", "drop_labels": ["pod", "debug"], "metrics": ["safe_metric"]}
+  ]
+}

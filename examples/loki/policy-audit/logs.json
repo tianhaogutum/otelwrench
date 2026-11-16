@@ -1,0 +1,172 @@
+{
+  "resourceLogs": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "checkout"
+            }
+          },
+          {
+            "key": "k8s.pod.name",
+            "value": {
+              "stringValue": "p1"
+            }
+          }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "scope": {
+            "name": "example.checkout",
+            "version": "1.0",
+            "attributes": [
+              {
+                "key": "component",
+                "value": {
+                  "stringValue": "payment"
+                }
+              }
+            ]
+          },
+          "logRecords": [
+            {
+              "timeUnixNano": "1700000000000000001",
+              "body": {
+                "stringValue": "order 1 accepted"
+              },
+              "attributes": [
+                {
+                  "key": "order.id",
+                  "value": {
+                    "stringValue": "42"
+                  }
+                },
+                {
+                  "key": "debug.secret",
+                  "value": {
+                    "stringValue": "SYNTHETIC-ONLY"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "checkout"
+            }
+          },
+          {
+            "key": "k8s.pod.name",
+            "value": {
+              "stringValue": "p2"
+            }
+          }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "scope": {
+            "name": "example.checkout",
+            "version": "1.0",
+            "attributes": [
+              {
+                "key": "component",
+                "value": {
+                  "stringValue": "payment"
+                }
+              }
+            ]
+          },
+          "logRecords": [
+            {
+              "timeUnixNano": "1700000000000000002",
+              "body": {
+                "stringValue": "order 2 accepted"
+              },
+              "attributes": [
+                {
+                  "key": "order.id",
+                  "value": {
+                    "stringValue": "43"
+                  }
+                },
+                {
+                  "key": "debug.secret",
+                  "value": {
+                    "stringValue": "SYNTHETIC-ONLY"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "checkout"
+            }
+          },
+          {
+            "key": "k8s.pod.name",
+            "value": {
+              "stringValue": "p1"
+            }
+          }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "scope": {
+            "name": "example.checkout",
+            "version": "1.0",
+            "attributes": [
+              {
+                "key": "component",
+                "value": {
+                  "stringValue": "payment"
+                }
+              }
+            ]
+          },
+          "logRecords": [
+            {
+              "timeUnixNano": "1700000000000000003",
+              "body": {
+                "stringValue": "order 3 accepted"
+              },
+              "attributes": [
+                {
+                  "key": "order.id",
+                  "value": {
+                    "stringValue": "44"
+                  }
+                },
+                {
+                  "key": "debug.secret",
+                  "value": {
+                    "stringValue": "SYNTHETIC-ONLY"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

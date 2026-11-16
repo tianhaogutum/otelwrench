@@ -1,0 +1,7 @@
+# HELP queue_depth Jobs waiting by queue.
+# TYPE queue_depth gauge
+queue_depth{queue="a"} 5
+queue_depth{queue="b"} 0
+# HELP jobs_processed_total Completed jobs.
+# TYPE jobs_processed_total counter
+jobs_processed_total{result="ok"} 120

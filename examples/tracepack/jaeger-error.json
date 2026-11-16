@@ -1,0 +1,20 @@
+{
+  "data": [{
+    "traceID": "abcdef0123456789abcdef0123456789",
+    "spans": [{
+      "traceID": "abcdef0123456789abcdef0123456789",
+      "spanID": "1111111111111111",
+      "operationName": "request",
+      "startTime": 1700000000000000,
+      "duration": 1000,
+      "processID": "p1",
+      "tags": [
+        { "key": "otel.status_description", "type": "string", "value": "synthetic failure" },
+        { "key": "span.kind", "type": "string", "value": "server" },
+        { "key": "otel.status_code", "type": "string", "value": "ERROR" },
+        { "key": "http.method", "type": "string", "value": "GET" }
+      ]
+    }],
+    "processes": { "p1": { "serviceName": "web" } }
+  }]
+}

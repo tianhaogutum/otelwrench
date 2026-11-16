@@ -1,0 +1,316 @@
+{
+  "description": "Hand-truthed complete synthetic corpus: eight traces, nine spans; no runtime or production forecast.",
+  "traces": [
+    {
+      "trace_id": "00000000000000000000000000000001",
+      "duration_ns": 10000000,
+      "statuses": [
+        "OK"
+      ],
+      "error": false,
+      "span_count": 1,
+      "baseline": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "all"
+        ]
+      },
+      "candidate": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "api"
+        ],
+        "votes": {
+          "errors": false,
+          "slow": false,
+          "api": true,
+          "non-health-errors": false,
+          "health": false,
+          "not-health": true,
+          "not-error": true,
+          "health-veto": false
+        }
+      },
+      "evidence": {
+        "errors": "matching observed statuses: []",
+        "slow": "duration floor(ms)=10; require >500 and <=700",
+        "api": "exact resource/span matches for 'service.name': ['api']",
+        "health": "exact resource/span matches for 'url.path': []"
+      }
+    },
+    {
+      "trace_id": "00000000000000000000000000000002",
+      "duration_ns": 600000000,
+      "statuses": [
+        "ERROR",
+        "OK"
+      ],
+      "error": true,
+      "span_count": 2,
+      "baseline": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "all"
+        ]
+      },
+      "candidate": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "errors",
+          "slow",
+          "api",
+          "non-health-errors"
+        ],
+        "votes": {
+          "errors": true,
+          "slow": true,
+          "api": true,
+          "non-health-errors": true,
+          "health": false,
+          "not-health": true,
+          "not-error": false,
+          "health-veto": false
+        }
+      },
+      "evidence": {
+        "errors": "matching observed statuses: ['ERROR']",
+        "slow": "duration floor(ms)=600; require >500 and <=700",
+        "api": "exact resource/span matches for 'service.name': ['api']",
+        "health": "exact resource/span matches for 'url.path': []"
+      }
+    },
+    {
+      "trace_id": "00000000000000000000000000000003",
+      "duration_ns": 600000000,
+      "statuses": [
+        "OK"
+      ],
+      "error": false,
+      "span_count": 1,
+      "baseline": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "all"
+        ]
+      },
+      "candidate": {
+        "decision": "drop",
+        "reason": "drop_policy_precedence",
+        "matched_policy_names": [
+          "slow",
+          "health-veto"
+        ],
+        "votes": {
+          "errors": false,
+          "slow": true,
+          "api": false,
+          "non-health-errors": false,
+          "health": true,
+          "not-health": false,
+          "not-error": true,
+          "health-veto": true
+        }
+      },
+      "evidence": {
+        "errors": "matching observed statuses: []",
+        "slow": "duration floor(ms)=600; require >500 and <=700",
+        "api": "exact resource/span matches for 'service.name': []",
+        "health": "exact resource/span matches for 'url.path': ['/health']"
+      }
+    },
+    {
+      "trace_id": "00000000000000000000000000000004",
+      "duration_ns": 10000000,
+      "statuses": [
+        "UNSET"
+      ],
+      "error": false,
+      "span_count": 1,
+      "baseline": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "all"
+        ]
+      },
+      "candidate": {
+        "decision": "drop",
+        "reason": "no_sample_policy_match",
+        "matched_policy_names": [],
+        "votes": {
+          "errors": false,
+          "slow": false,
+          "api": false,
+          "non-health-errors": false,
+          "health": false,
+          "not-health": true,
+          "not-error": true,
+          "health-veto": false
+        }
+      },
+      "evidence": {
+        "errors": "matching observed statuses: []",
+        "slow": "duration floor(ms)=10; require >500 and <=700",
+        "api": "exact resource/span matches for 'service.name': []",
+        "health": "exact resource/span matches for 'url.path': []"
+      }
+    },
+    {
+      "trace_id": "00000000000000000000000000000005",
+      "duration_ns": 10000000,
+      "statuses": [
+        "ERROR"
+      ],
+      "error": true,
+      "span_count": 1,
+      "baseline": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "all"
+        ]
+      },
+      "candidate": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "errors"
+        ],
+        "votes": {
+          "errors": true,
+          "slow": false,
+          "api": false,
+          "non-health-errors": false,
+          "health": true,
+          "not-health": false,
+          "not-error": false,
+          "health-veto": false
+        }
+      },
+      "evidence": {
+        "errors": "matching observed statuses: ['ERROR']",
+        "slow": "duration floor(ms)=10; require >500 and <=700",
+        "api": "exact resource/span matches for 'service.name': []",
+        "health": "exact resource/span matches for 'url.path': ['/health']"
+      }
+    },
+    {
+      "trace_id": "00000000000000000000000000000006",
+      "duration_ns": 500999999,
+      "statuses": [
+        "OK"
+      ],
+      "error": false,
+      "span_count": 1,
+      "baseline": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "all"
+        ]
+      },
+      "candidate": {
+        "decision": "drop",
+        "reason": "no_sample_policy_match",
+        "matched_policy_names": [],
+        "votes": {
+          "errors": false,
+          "slow": false,
+          "api": false,
+          "non-health-errors": false,
+          "health": false,
+          "not-health": true,
+          "not-error": true,
+          "health-veto": false
+        }
+      },
+      "evidence": {
+        "errors": "matching observed statuses: []",
+        "slow": "duration floor(ms)=500; require >500 and <=700",
+        "api": "exact resource/span matches for 'service.name': []",
+        "health": "exact resource/span matches for 'url.path': []"
+      }
+    },
+    {
+      "trace_id": "00000000000000000000000000000007",
+      "duration_ns": 700999999,
+      "statuses": [
+        "UNSET"
+      ],
+      "error": false,
+      "span_count": 1,
+      "baseline": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "all"
+        ]
+      },
+      "candidate": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "slow"
+        ],
+        "votes": {
+          "errors": false,
+          "slow": true,
+          "api": false,
+          "non-health-errors": false,
+          "health": false,
+          "not-health": true,
+          "not-error": true,
+          "health-veto": false
+        }
+      },
+      "evidence": {
+        "errors": "matching observed statuses: []",
+        "slow": "duration floor(ms)=700; require >500 and <=700",
+        "api": "exact resource/span matches for 'service.name': []",
+        "health": "exact resource/span matches for 'url.path': []"
+      }
+    },
+    {
+      "trace_id": "00000000000000000000000000000008",
+      "duration_ns": 701000000,
+      "statuses": [
+        "OK"
+      ],
+      "error": false,
+      "span_count": 1,
+      "baseline": {
+        "decision": "sample",
+        "reason": "sample_policy_match",
+        "matched_policy_names": [
+          "all"
+        ]
+      },
+      "candidate": {
+        "decision": "drop",
+        "reason": "no_sample_policy_match",
+        "matched_policy_names": [],
+        "votes": {
+          "errors": false,
+          "slow": false,
+          "api": false,
+          "non-health-errors": false,
+          "health": false,
+          "not-health": true,
+          "not-error": true,
+          "health-veto": false
+        }
+      },
+      "evidence": {
+        "errors": "matching observed statuses: []",
+        "slow": "duration floor(ms)=701; require >500 and <=700",
+        "api": "exact resource/span matches for 'service.name': []",
+        "health": "exact resource/span matches for 'url.path': []"
+      }
+    }
+  ]
+}

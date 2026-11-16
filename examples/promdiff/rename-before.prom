@@ -1,0 +1,2 @@
+# TYPE old_requests_total counter
+old_requests_total{verb="get"} 1

@@ -1,0 +1,43 @@
+# HELP http_server_duration Duration of inbound HTTP requests.
+# TYPE http_server_duration histogram
+http_server_duration_bucket{http_route="/cart",le="100"} 912
+http_server_duration_bucket{http_route="/cart",le="250"} 1180
+http_server_duration_bucket{http_route="/cart",le="500"} 1201
+http_server_duration_bucket{http_route="/cart",le="+Inf"} 1204
+http_server_duration_sum{http_route="/cart"} 104748
+http_server_duration_count{http_route="/cart"} 1204
+http_server_duration_bucket{http_route="/checkout",le="100"} 301
+http_server_duration_bucket{http_route="/checkout",le="250"} 688
+http_server_duration_bucket{http_route="/checkout",le="500"} 790
+http_server_duration_bucket{http_route="/checkout",le="+Inf"} 805
+http_server_duration_sum{http_route="/checkout"} 70035
+http_server_duration_count{http_route="/checkout"} 805
+# HELP checkout_orders Orders placed.
+# TYPE checkout_orders counter
+checkout_orders{payment="card"} 812
+checkout_orders{payment="wallet"} 133
+# HELP queue_wait_milliseconds Age of the oldest waiting job.
+# TYPE queue_wait_milliseconds gauge
+queue_wait_milliseconds{queue="email"} 120
+queue_wait_milliseconds{queue="invoice"} 340
+# HELP http_client_requests_total Outbound HTTP requests.
+# TYPE http_client_requests_total counter
+http_client_requests_total{peer="payments",status_code="200"} 901
+http_client_requests_total{peer="payments",status_code="503"} 7
+http_client_requests_total{peer="inventory",status_code="200"} 1204
+# HELP runtime_gc_pause_seconds Garbage-collection pauses.
+# TYPE runtime_gc_pause_seconds summary
+runtime_gc_pause_seconds{quantile="0.5"} 0.002
+runtime_gc_pause_seconds{quantile="0.99"} 0.011
+runtime_gc_pause_seconds_sum 4.2
+runtime_gc_pause_seconds_count 1630
+# HELP worker_jobs_active Jobs currently running.
+# TYPE worker_jobs_active counter
+worker_jobs_active{pool="default"} 4
+# HELP rpc_client_calls_total Outbound RPC calls.
+# TYPE rpc_client_calls_total counter
+rpc_client_calls_total{rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 3001
+rpc_client_calls_total{rpc_method="Release",rpc_service="inventory.v1.Stock"} 2875
+# HELP process_resident_memory_bytes Resident memory size.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 2.1e+08

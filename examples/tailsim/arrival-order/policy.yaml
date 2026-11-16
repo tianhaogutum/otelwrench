@@ -1,0 +1,6 @@
+processors:
+  tail_sampling:
+    policies:
+      - name: errors
+        type: status_code
+        status_code: {status_codes: [ERROR]}

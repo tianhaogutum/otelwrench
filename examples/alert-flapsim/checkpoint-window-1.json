@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "matrix",
+    "result": [
+      {
+        "metric": {
+          "__name__": "synthetic_load",
+          "instance": "demo"
+        },
+        "values": [
+          [
+            0,
+            "0"
+          ],
+          [
+            60,
+            "2"
+          ]
+        ]
+      }
+    ]
+  }
+}

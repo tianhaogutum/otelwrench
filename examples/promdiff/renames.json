@@ -1,0 +1,4 @@
+{
+  "metrics": {"old_requests_total": "requests_total"},
+  "labels": {"old_requests_total": {"verb": "method"}}
+}

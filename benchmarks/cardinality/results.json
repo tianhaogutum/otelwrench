@@ -1,0 +1,74 @@
+{
+  "generator": {
+    "methods": 2,
+    "pods": 30,
+    "repeats": 3,
+    "routes": 100,
+    "seed": "none; fixed nested loops"
+  },
+  "input_bytes": 516886,
+  "input_sha256": "c86181a4750467ede1fe18edd8b4c829d84edbdbce717e103b5295421df011da",
+  "interpretation": "Baseline retains all labels. Safe deletion preserves keys. Lower projected unique-key count is unsafe merging, not valid ingestion or a speed/cost/memory gain. Timings are measured wall time, not speedup comparisons.",
+  "platform": "Linux-7.0.0-1017-gcp-x86_64-with-glibc2.43",
+  "python": "3.12.13",
+  "recorded_at_utc": "2026-11-11T19:13:19.177608+00:00",
+  "results": [
+    {
+      "baseline_observed_keys": 6000,
+      "colliding_original_series": 0,
+      "collision_groups": 0,
+      "collision_value_relations": {},
+      "drop_labels": [],
+      "median_wall_seconds": 0.10161941200021829,
+      "name": "baseline_keep_all",
+      "projected_keys": 6000,
+      "unsafe": false,
+      "wall_seconds_including_process_and_json_output": [
+        0.10801493299914,
+        0.10144174599918188,
+        0.10161941200021829
+      ]
+    },
+    {
+      "baseline_observed_keys": 6000,
+      "colliding_original_series": 0,
+      "collision_groups": 0,
+      "collision_value_relations": {},
+      "drop_labels": [
+        "debug_id"
+      ],
+      "median_wall_seconds": 0.13300249299936695,
+      "name": "safe_drop_debug_id",
+      "projected_keys": 6000,
+      "unsafe": false,
+      "wall_seconds_including_process_and_json_output": [
+        0.14888015300130064,
+        0.12956096199923195,
+        0.13300249299936695
+      ]
+    },
+    {
+      "baseline_observed_keys": 6000,
+      "colliding_original_series": 6000,
+      "collision_groups": 200,
+      "collision_value_relations": {
+        "different": 100,
+        "equal": 100
+      },
+      "drop_labels": [
+        "pod",
+        "debug_id"
+      ],
+      "median_wall_seconds": 0.22125153700108058,
+      "name": "unsafe_drop_pod_and_debug_id",
+      "projected_keys": 200,
+      "unsafe": true,
+      "wall_seconds_including_process_and_json_output": [
+        0.22125153700108058,
+        0.22305365899956087,
+        0.19817183700070018
+      ]
+    }
+  ],
+  "verification": "Independent generator-record identities, all label cardinalities, every collision and every original witness checked on each run."
+}

@@ -1,0 +1,59 @@
+# HELP http_server_duration_milliseconds Duration of inbound HTTP requests.
+# TYPE http_server_duration_milliseconds histogram
+http_server_duration_milliseconds_bucket{http_route="/cart",le="100"} 912
+http_server_duration_milliseconds_bucket{http_route="/cart",le="250"} 1180
+http_server_duration_milliseconds_bucket{http_route="/cart",le="500"} 1201
+http_server_duration_milliseconds_bucket{http_route="/cart",le="+Inf"} 1204
+http_server_duration_milliseconds_sum{http_route="/cart"} 104748
+http_server_duration_milliseconds_count{http_route="/cart"} 1204
+http_server_duration_milliseconds_bucket{http_route="/checkout",le="100"} 301
+http_server_duration_milliseconds_bucket{http_route="/checkout",le="250"} 688
+http_server_duration_milliseconds_bucket{http_route="/checkout",le="500"} 790
+http_server_duration_milliseconds_bucket{http_route="/checkout",le="+Inf"} 805
+http_server_duration_milliseconds_sum{http_route="/checkout"} 70035
+http_server_duration_milliseconds_count{http_route="/checkout"} 805
+# HELP checkout_orders_total Orders placed.
+# TYPE checkout_orders_total counter
+checkout_orders_total{payment="card"} 812
+checkout_orders_total{payment="wallet"} 133
+# HELP queue_wait_seconds Age of the oldest waiting job.
+# TYPE queue_wait_seconds gauge
+queue_wait_seconds{queue="email"} 0.12
+queue_wait_seconds{queue="invoice"} 0.34
+# HELP http_client_requests_total Outbound HTTP requests.
+# TYPE http_client_requests_total counter
+http_client_requests_total{http_response_status_code="200",peer="payments"} 901
+http_client_requests_total{http_response_status_code="503",peer="payments"} 7
+http_client_requests_total{http_response_status_code="200",peer="inventory"} 1204
+# HELP worker_jobs_active Jobs currently running.
+# TYPE worker_jobs_active gauge
+worker_jobs_active{pool="default"} 4
+# HELP rpc_client_calls_total Outbound RPC calls.
+# TYPE rpc_client_calls_total counter
+rpc_client_calls_total{net_sock_peer_port="41022",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 250
+rpc_client_calls_total{net_sock_peer_port="41387",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 251
+rpc_client_calls_total{net_sock_peer_port="42210",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 252
+rpc_client_calls_total{net_sock_peer_port="43118",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 253
+rpc_client_calls_total{net_sock_peer_port="44901",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 254
+rpc_client_calls_total{net_sock_peer_port="45312",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 255
+rpc_client_calls_total{net_sock_peer_port="46077",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 256
+rpc_client_calls_total{net_sock_peer_port="47230",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 257
+rpc_client_calls_total{net_sock_peer_port="48119",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 258
+rpc_client_calls_total{net_sock_peer_port="49004",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 259
+rpc_client_calls_total{net_sock_peer_port="50211",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 260
+rpc_client_calls_total{net_sock_peer_port="51876",rpc_method="Reserve",rpc_service="inventory.v1.Stock"} 261
+rpc_client_calls_total{net_sock_peer_port="41022",rpc_method="Release",rpc_service="inventory.v1.Stock"} 239
+rpc_client_calls_total{net_sock_peer_port="41387",rpc_method="Release",rpc_service="inventory.v1.Stock"} 240
+rpc_client_calls_total{net_sock_peer_port="42210",rpc_method="Release",rpc_service="inventory.v1.Stock"} 241
+rpc_client_calls_total{net_sock_peer_port="43118",rpc_method="Release",rpc_service="inventory.v1.Stock"} 242
+rpc_client_calls_total{net_sock_peer_port="44901",rpc_method="Release",rpc_service="inventory.v1.Stock"} 243
+rpc_client_calls_total{net_sock_peer_port="45312",rpc_method="Release",rpc_service="inventory.v1.Stock"} 244
+rpc_client_calls_total{net_sock_peer_port="46077",rpc_method="Release",rpc_service="inventory.v1.Stock"} 245
+rpc_client_calls_total{net_sock_peer_port="47230",rpc_method="Release",rpc_service="inventory.v1.Stock"} 246
+rpc_client_calls_total{net_sock_peer_port="48119",rpc_method="Release",rpc_service="inventory.v1.Stock"} 247
+rpc_client_calls_total{net_sock_peer_port="49004",rpc_method="Release",rpc_service="inventory.v1.Stock"} 248
+rpc_client_calls_total{net_sock_peer_port="50211",rpc_method="Release",rpc_service="inventory.v1.Stock"} 249
+rpc_client_calls_total{net_sock_peer_port="51876",rpc_method="Release",rpc_service="inventory.v1.Stock"} 250
+# HELP process_resident_memory_bytes Resident memory size.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 2.3e+08

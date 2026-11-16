@@ -1,0 +1,101 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "traceID": "11111111111111111111111111111111",
+      "spans": [
+        {
+          "traceID": "11111111111111111111111111111111",
+          "spanID": "2222222222222222",
+          "processID": "web",
+          "operationName": "GET /shop",
+          "startTime": 1700000000000000,
+          "duration": 100000,
+          "references": [],
+          "tags": [
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "otel.status_code",
+              "type": "string",
+              "value": "UNSET"
+            },
+            {
+              "key": "customer",
+              "type": "string",
+              "value": "a"
+            }
+          ],
+          "logs": []
+        },
+        {
+          "traceID": "11111111111111111111111111111111",
+          "spanID": "3333333333333333",
+          "processID": "web",
+          "operationName": "GET /shop",
+          "startTime": 1700000000100000,
+          "duration": 300000,
+          "references": [],
+          "tags": [
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "otel.status_code",
+              "type": "string",
+              "value": "UNSET"
+            },
+            {
+              "key": "customer",
+              "type": "string",
+              "value": "b"
+            }
+          ],
+          "logs": []
+        },
+        {
+          "traceID": "11111111111111111111111111111111",
+          "spanID": "4444444444444444",
+          "processID": "db",
+          "operationName": "SELECT",
+          "startTime": 1700000000200000,
+          "duration": 500000,
+          "references": [],
+          "tags": [
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            },
+            {
+              "key": "otel.status_code",
+              "type": "string",
+              "value": "ERROR"
+            },
+            {
+              "key": "customer",
+              "type": "string",
+              "value": "a"
+            }
+          ],
+          "logs": []
+        }
+      ],
+      "processes": {
+        "web": {
+          "serviceName": "web",
+          "tags": []
+        },
+        "db": {
+          "serviceName": "db",
+          "tags": []
+        }
+      }
+    }
+  ]
+}

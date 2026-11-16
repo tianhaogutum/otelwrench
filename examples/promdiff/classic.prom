@@ -1,0 +1,15 @@
+# HELP jobs_total Completed jobs; label escaping example.
+# TYPE jobs_total counter
+jobs_total{path="C:\\tmp\n\"quoted\""} 10
+# HELP latency_seconds Request latency.
+# TYPE latency_seconds histogram
+latency_seconds_bucket{method="get",le="0.5"} 1
+latency_seconds_bucket{method="get",le="+Inf"} 2
+latency_seconds_sum{method="get"} 0.7
+latency_seconds_count{method="get"} 2
+# HELP rpc_seconds RPC duration summary.
+# TYPE rpc_seconds summary
+rpc_seconds{method="post",quantile="0.5"} 0.1
+rpc_seconds{method="post",quantile="0.99"} 0.2
+rpc_seconds_sum{method="post"} 0.3
+rpc_seconds_count{method="post"} 2

@@ -1,0 +1,10 @@
+[
+  {
+    "traceId": "11111111111111111111111111111111",
+    "id": "2222222222222222",
+    "name": "GET /",
+    "timestamp": 1700000000000000,
+    "duration": 1200,
+    "localEndpoint": { "serviceName": "web" }
+  }
+]

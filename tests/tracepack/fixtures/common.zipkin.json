@@ -1,0 +1,25 @@
+[
+  {
+    "traceId": "abcdef0123456789abcdef0123456789",
+    "id": "1111111111111111",
+    "name": "GET /checkout",
+    "kind": "SERVER",
+    "timestamp": 1700000000000000,
+    "duration": 1200,
+    "localEndpoint": {"serviceName": "web"},
+    "tags": {"http.method": "GET"},
+    "annotations": [{"timestamp": 1700000000000100, "value": "received"}]
+  },
+  {
+    "traceId": "abcdef0123456789abcdef0123456789",
+    "id": "2222222222222222",
+    "parentId": "1111111111111111",
+    "name": "SELECT",
+    "kind": "CLIENT",
+    "timestamp": 1700000000000200,
+    "duration": 900,
+    "localEndpoint": {"serviceName": "db"},
+    "tags": {"error": "timeout"},
+    "annotations": [{"timestamp": 1700000000000800, "value": "retry"}]
+  }
+]

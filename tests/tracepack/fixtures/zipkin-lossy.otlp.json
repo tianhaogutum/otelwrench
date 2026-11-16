@@ -1,0 +1,26 @@
+{
+  "resourceSpans": [{
+    "resource": {"attributes": [
+      {"key": "service.name", "value": {"stringValue": "web"}},
+      {"key": "host.name", "value": {"stringValue": "private-value"}}
+    ]},
+    "scopeSpans": [{"spans": [{
+      "traceId": "abcdef0123456789abcdef0123456789",
+      "spanId": "1111111111111111",
+      "name": "request",
+      "startTimeUnixNano": "1700000000000000999",
+      "endTimeUnixNano": "1700000000000002000",
+      "attributes": [
+        {"key": "route", "value": {"stringValue": "/checkout"}},
+        {"key": "attempt", "value": {"intValue": "9223372036854775807"}},
+        {"key": "retry", "value": {"boolValue": true}},
+        {"key": "ratio", "value": {"doubleValue": 0.125}}
+      ],
+      "links": [{"traceId": "1234567890abcdef1234567890abcdef", "spanId": "2222222222222222"}],
+      "events": [{
+        "timeUnixNano": "1700000000000001001", "name": "tick",
+        "attributes": [{"key": "detail", "value": {"stringValue": "private-value"}}]
+      }]
+    }]}]
+  }]
+}

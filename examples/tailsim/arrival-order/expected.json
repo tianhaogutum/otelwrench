@@ -1,0 +1,24 @@
+{
+  "decision_wait_ms": 100,
+  "summary": {
+    "reference_traces": 5,
+    "reference_spans": 8,
+    "arrived_spans": 6,
+    "late_spans": 1,
+    "missing_spans": 2,
+    "decided_traces": 3,
+    "pending_traces": 1,
+    "unobserved_traces": 1,
+    "incomplete_decisions": 2,
+    "sampled_traces": 1,
+    "kept_spans": 2,
+    "changed_decision_trace_ids": ["00000000000000000000000000000002", "00000000000000000000000000000003"]
+  },
+  "traces": [
+    {"suffix": 1, "state": "decided", "deadline": 100000000, "decision": "sample", "full_trace_decision": "sample", "on_time": [1, 2], "late": [], "missing": [], "unseen_at_decision": []},
+    {"suffix": 2, "state": "decided", "deadline": 100000000, "decision": "drop", "full_trace_decision": "sample", "on_time": [1], "late": [2], "missing": [], "unseen_at_decision": [2]},
+    {"suffix": 3, "state": "decided", "deadline": 100000000, "decision": "drop", "full_trace_decision": "sample", "on_time": [1], "late": [], "missing": [2], "unseen_at_decision": [2]},
+    {"suffix": 4, "state": "pending", "deadline": 300000000, "decision": null, "full_trace_decision": "sample", "on_time": [1], "late": [], "missing": [], "unseen_at_decision": null},
+    {"suffix": 5, "state": "unobserved", "deadline": null, "decision": null, "full_trace_decision": "drop", "on_time": [], "late": [], "missing": [1], "unseen_at_decision": null}
+  ]
+}

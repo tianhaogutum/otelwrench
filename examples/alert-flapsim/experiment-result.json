@@ -1,0 +1,105 @@
+{
+  "experiment": "seeded finite-capture jitter replay",
+  "seed": 79,
+  "fixture": "examples/jitter-query-range.json",
+  "samples": 20,
+  "window": {
+    "start": 0,
+    "end": 1140,
+    "evaluations": 20,
+    "rangeSource": "config"
+  },
+  "baseline": {
+    "config": {
+      "evaluationIntervalSeconds": 60,
+      "threshold": {
+        "op": ">",
+        "value": 1
+      },
+      "forSeconds": 0,
+      "keepFiringForSeconds": 0,
+      "missingData": "error"
+    },
+    "summary": {
+      "series": 1,
+      "firstFiring": 60,
+      "firingDurationSeconds": 600,
+      "firingEpisodes": 5,
+      "resolutions": 5,
+      "openAtEnd": 0,
+      "pendingAtEnd": 0,
+      "missingSamples": 0,
+      "nanSamples": 0,
+      "heldEvaluations": 0
+    },
+    "episodes": [
+      [
+        60,
+        180
+      ],
+      [
+        240,
+        360
+      ],
+      [
+        420,
+        540
+      ],
+      [
+        720,
+        840
+      ],
+      [
+        900,
+        1020
+      ]
+    ]
+  },
+  "candidate": {
+    "config": {
+      "evaluationIntervalSeconds": 60,
+      "threshold": {
+        "op": ">",
+        "value": 1
+      },
+      "forSeconds": 60,
+      "keepFiringForSeconds": 120,
+      "missingData": "error"
+    },
+    "summary": {
+      "series": 1,
+      "firstFiring": 120,
+      "firingDurationSeconds": 900,
+      "firingEpisodes": 2,
+      "resolutions": 2,
+      "openAtEnd": 0,
+      "pendingAtEnd": 0,
+      "missingSamples": 0,
+      "nanSamples": 0,
+      "heldEvaluations": 7
+    },
+    "episodes": [
+      [
+        120,
+        660
+      ],
+      [
+        780,
+        1140
+      ]
+    ]
+  },
+  "delta": {
+    "firstFiringDelaySeconds": 60,
+    "firingDurationSeconds": 300,
+    "firingEpisodes": -3,
+    "resolutions": -3,
+    "openAtEnd": 0
+  },
+  "validation": "fixture regeneration, threshold classification, and hand-calculated episode endpoints and counts passed",
+  "limitations": [
+    "Chosen synthetic pattern with small seeded noise; no statistical or production-performance claim.",
+    "Fewer resolutions cost later first firing and more time firing during false conditions.",
+    "No best threshold is selected. Results are limited to the explicit finite capture and initial inactive state."
+  ]
+}

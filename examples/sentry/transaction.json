@@ -1,0 +1,27 @@
+{
+  "type": "transaction",
+  "event_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "transaction": "GET /synthetic",
+  "start_timestamp": 1700000000.125000001,
+  "timestamp": 1700000001.5,
+  "release": "demo@1.0",
+  "environment": "synthetic",
+  "contexts": {"trace": {
+    "trace_id": "11111111111111111111111111111111",
+    "span_id": "2222222222222222",
+    "op": "http.server",
+    "status": "ok"
+  }},
+  "spans": [{
+    "trace_id": "11111111111111111111111111111111",
+    "span_id": "3333333333333333",
+    "parent_span_id": "2222222222222222",
+    "op": "db.query",
+    "description": "SELECT synthetic",
+    "start_timestamp": 1700000000.25,
+    "timestamp": 1700000000.5,
+    "status": "ok",
+    "data": {"db.system": "synthetic"}
+  }],
+  "measurements": {"synthetic": {"value": 1, "unit": "none"}}
+}

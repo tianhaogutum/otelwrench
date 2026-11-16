@@ -1,0 +1,78 @@
+{"sdk":{"name":"synthetic-fixture"},"sent_at":"2023-11-14T22:13:22Z"}
+{"type":"event","length":1004}
+{
+  "event_id": "cccccccccccccccccccccccccccccccc",
+  "timestamp": "2023-11-14T22:13:20.123456789Z",
+  "level": "error",
+  "message": "合成错误 — café\nsecond line",
+  "release": "demo@1.0",
+  "environment": "synthetic",
+  "exception": {
+    "values": [
+      {
+        "type": "ValueError",
+        "value": "synthetic cause",
+        "stacktrace": {
+          "frames": [
+            {
+              "filename": "synthetic.py",
+              "function": "parse",
+              "lineno": 12,
+              "in_app": true,
+              "vars": {
+                "not_exported": "synthetic variable"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "RuntimeError",
+        "value": "synthetic wrapper",
+        "mechanism": {
+          "type": "generic"
+        }
+      }
+    ]
+  },
+  "user": {
+    "id": "synthetic-user-do-not-copy"
+  },
+  "tags": {
+    "fixture": "synthetic"
+  },
+  "contexts": {
+    "runtime": {
+      "name": "synthetic-runtime"
+    }
+  }
+}
+{"type":"transaction","length":804}
+{
+  "type": "transaction",
+  "event_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "transaction": "GET /synthetic",
+  "start_timestamp": 1700000000.125000001,
+  "timestamp": 1700000001.5,
+  "release": "demo@1.0",
+  "environment": "synthetic",
+  "contexts": {"trace": {
+    "trace_id": "11111111111111111111111111111111",
+    "span_id": "2222222222222222",
+    "op": "http.server",
+    "status": "ok"
+  }},
+  "spans": [{
+    "trace_id": "11111111111111111111111111111111",
+    "span_id": "3333333333333333",
+    "parent_span_id": "2222222222222222",
+    "op": "db.query",
+    "description": "SELECT synthetic",
+    "start_timestamp": 1700000000.25,
+    "timestamp": 1700000000.5,
+    "status": "ok",
+    "data": {"db.system": "synthetic"}
+  }],
+  "measurements": {"synthetic": {"value": 1, "unit": "none"}}
+}
+

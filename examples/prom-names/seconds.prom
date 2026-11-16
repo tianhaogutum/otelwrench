@@ -1,0 +1,11 @@
+# TYPE elapsed_seconds_total counter
+elapsed_seconds_total 9223372036854775.807
+# TYPE latency_seconds gauge
+latency_seconds{kind="decimal"} 0.000100000000000000000001
+latency_seconds{kind="integer"} 1.250
+# TYPE payload_bytes gauge
+payload_bytes 4096
+# TYPE ready_ratio gauge
+ready_ratio 1
+# TYPE uptime_seconds gauge
+uptime_seconds 2

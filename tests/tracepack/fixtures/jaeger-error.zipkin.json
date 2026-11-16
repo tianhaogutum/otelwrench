@@ -1,0 +1,13 @@
+[
+  {
+    "traceId": "abcdef0123456789abcdef0123456789",
+    "id": "1111111111111111",
+    "name": "request",
+    "timestamp": 1700000000000000,
+    "duration": 1000,
+    "tags": { "error": "", "http.method": "GET" },
+    "annotations": [],
+    "kind": "SERVER",
+    "localEndpoint": { "serviceName": "web" }
+  }
+]

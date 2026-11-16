@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "traceID": "00000000000000000000000000000009",
+      "spans": [
+        {
+          "traceID": "00000000000000000000000000000009",
+          "spanID": "000000000000000d",
+          "operationName": "query",
+          "processID": "p2",
+          "startTime": 1700000000000000,
+          "duration": 10000,
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "00000000000000000000000000000009",
+              "spanID": "000000000000000b"
+            }
+          ],
+          "tags": [
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "warnings": null
+        },
+        {
+          "traceID": "00000000000000000000000000000009",
+          "spanID": "000000000000000c",
+          "operationName": "query",
+          "processID": "p2",
+          "startTime": 1700000000000000,
+          "duration": 10000,
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "00000000000000000000000000000009",
+              "spanID": "000000000000000b"
+            }
+          ],
+          "tags": [
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "warnings": null
+        },
+        {
+          "traceID": "00000000000000000000000000000009",
+          "spanID": "000000000000000b",
+          "operationName": "checkout",
+          "processID": "p1",
+          "startTime": 1700000000000000,
+          "duration": 100000,
+          "references": [],
+          "tags": [
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "shop",
+          "tags": []
+        },
+        "p2": {
+          "serviceName": "database",
+          "tags": []
+        }
+      },
+      "warnings": null
+    }
+  ],
+  "total": 1,
+  "limit": 0,
+  "offset": 0,
+  "errors": null
+}

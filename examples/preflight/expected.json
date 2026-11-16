@@ -1,0 +1,32 @@
+{
+  "_comment": "Hand-written oracle for the fictional checkout-api exporter upgrade in this directory. Each query is labelled from what the upgrade does to the series it reads, independently of otelwrench output.",
+  "changes": {
+    "renamed": {
+      "http_server_duration": "http_server_duration_milliseconds",
+      "checkout_orders": "checkout_orders_total",
+      "queue_wait_milliseconds": "queue_wait_seconds"
+    },
+    "rescaled": ["queue_wait_milliseconds"],
+    "label_renamed": {"http_client_requests_total": {"status_code": "http_response_status_code"}},
+    "removed": ["runtime_gc_pause_seconds"],
+    "type_changed": {"worker_jobs_active": ["counter", "gauge"]},
+    "label_added": {"rpc_client_calls_total": ["net_sock_peer_port"]},
+    "series": [27, 45]
+  },
+  "queries": {
+    "p95 latency by route": {"broken": true, "why": "reads http_server_duration_bucket, renamed with a _milliseconds suffix"},
+    "Orders per minute": {"broken": true, "why": "reads checkout_orders, renamed with a _total suffix"},
+    "Payment responses by status": {"broken": true, "why": "groups by status_code, renamed to http_response_status_code"},
+    "Outbound requests by peer": {"broken": false, "why": "family and the peer label are unchanged"},
+    "GC pause p99": {"broken": true, "why": "runtime_gc_pause_seconds is no longer exported"},
+    "Worker job starts": {"broken": true, "why": "rate() over worker_jobs_active, now a gauge"},
+    "Inventory RPCs by method": {"broken": false, "why": "sum by (rpc_method) still works; the new port label only adds series"},
+    "Resident memory": {"broken": false, "why": "unchanged"},
+    "CheckoutLatencyHigh": {"broken": true, "why": "reads http_server_duration_bucket; the alert can never fire"},
+    "QueueBacklog": {"broken": true, "why": "reads queue_wait_milliseconds; the new series is in seconds, so a renamed query also needs 0.5 instead of 500"},
+    "PaymentsErrorRate": {"broken": true, "why": "filters on status_code"},
+    "MemoryHigh": {"broken": false, "why": "unchanged"},
+    "checkout:orders:rate5m": {"broken": true, "why": "reads checkout_orders"},
+    "inventory:rpc_calls:rate5m": {"broken": false, "why": "sum by (rpc_service) still works"}
+  }
+}

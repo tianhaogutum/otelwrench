@@ -1,0 +1,2 @@
+# Literal summary CSV byte oracles keep their required CRLF records.
+*.csv -text whitespace=cr-at-eol

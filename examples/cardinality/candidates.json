@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "candidates": [
+    {"name": "Trim redundant debug", "drop_labels": ["debug"]},
+    {"name": "Review interaction", "drop_labels": ["a", "b"]}
+  ]
+}

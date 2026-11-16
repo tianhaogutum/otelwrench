@@ -1,0 +1,2 @@
+# TYPE queue_depth gauge
+queue_depth{queue="invalid\q"} 1

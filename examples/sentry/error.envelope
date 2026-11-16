@@ -1,0 +1,3 @@
+{"event_id":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}
+{"type":"event"}
+{"timestamp":1700000000.25,"level":"error","message":"boom","release":"demo@1.0","environment":"synthetic","contexts":{"trace":{"trace_id":"11111111111111111111111111111111","span_id":"2222222222222222"}}}

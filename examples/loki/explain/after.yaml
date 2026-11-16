@@ -1,0 +1,22 @@
+limits_config:
+  otlp_config:
+    resource_attributes:
+      attributes_config:
+        - action: structured_metadata
+          attributes: [unrelated.key]
+        - action: structured_metadata
+          regex: '^service[.]name$'
+        - action: drop
+          regex: '^service[.]'
+        - action: index_label
+          attributes: [service_name]
+    scope_attributes:
+      - action: drop
+        attributes: [internal.component]
+    log_attributes:
+      - action: structured_metadata
+        regex: '^net[.]'
+      - action: drop
+        attributes: [net.peer]
+      - action: drop
+        regex: 'private'

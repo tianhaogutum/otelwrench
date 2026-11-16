@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "baseline": [],
+  "candidate": [
+    {
+      "source": "span",
+      "key": "customer",
+      "label": "customer"
+    }
+  ]
+}

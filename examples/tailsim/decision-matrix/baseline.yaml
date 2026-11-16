@@ -1,0 +1,5 @@
+processors:
+  tail_sampling:
+    policies:
+      - name: all
+        type: always_sample

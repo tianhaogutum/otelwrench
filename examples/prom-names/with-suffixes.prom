@@ -1,0 +1,11 @@
+# TYPE active_sessions gauge
+active_sessions 3
+# TYPE memory_used_bytes gauge
+memory_used_bytes 4096
+# TYPE queue_load_ratio gauge
+queue_load_ratio 0.25
+# TYPE request_duration_milliseconds gauge
+request_duration_milliseconds{route="/cart"} 12.5
+# HELP requests_total Synthetic request count
+# TYPE requests_total counter
+requests_total{route="/cart"} 7

@@ -1,0 +1,17 @@
+processors:
+  tail_sampling:
+    policies:
+      - name: errors-except-health
+        type: and
+        and:
+          and_sub_policy:
+            - name: errors
+              type: status_code
+              status_code: {status_codes: [ERROR]}
+            - name: not-health
+              type: not
+              not:
+                not_sub_policy:
+                  name: health
+                  type: string_attribute
+                  string_attribute: {key: url.path, values: [/health]}

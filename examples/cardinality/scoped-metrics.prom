@@ -1,0 +1,5 @@
+safe_metric{pod="a",route="/a",debug="x"} 1 10
+safe_metric{pod="b",route="/b",debug=""} 1.0 11
+risky_metric{pod="a",route="/same",debug="k"} 2 12
+risky_metric{pod="b",route="/same",debug="k"} 3 13
+aux_metric{debug="aux"} 4 14

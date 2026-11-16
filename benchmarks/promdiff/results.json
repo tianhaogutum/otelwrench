@@ -1,0 +1,142 @@
+{
+  "baseline_algorithm": "accept if both snapshots parse with prometheus_client (not promtool)",
+  "cases": [
+    {
+      "candidate_series": 100,
+      "case": "value_only",
+      "change_classes": [],
+      "expected_violation": false,
+      "guard_exit": 0,
+      "guard_status": "pass",
+      "missing_series": 0,
+      "new_series": 0,
+      "single_snapshot_parse_accepted": true
+    },
+    {
+      "candidate_series": 95,
+      "case": "removed_family",
+      "change_classes": [
+        "family_removed"
+      ],
+      "expected_violation": true,
+      "guard_exit": 1,
+      "guard_status": "fail",
+      "missing_series": 5,
+      "new_series": 0,
+      "single_snapshot_parse_accepted": true
+    },
+    {
+      "candidate_series": 100,
+      "case": "type_change",
+      "change_classes": [
+        "type_changed"
+      ],
+      "expected_violation": true,
+      "guard_exit": 1,
+      "guard_status": "fail",
+      "missing_series": 0,
+      "new_series": 0,
+      "single_snapshot_parse_accepted": true
+    },
+    {
+      "candidate_series": 100,
+      "case": "label_keys",
+      "change_classes": [
+        "label_schema_changed",
+        "series_added",
+        "series_missing"
+      ],
+      "expected_violation": true,
+      "guard_exit": 1,
+      "guard_status": "fail",
+      "missing_series": 5,
+      "new_series": 5,
+      "single_snapshot_parse_accepted": true
+    },
+    {
+      "candidate_series": 125,
+      "case": "growth",
+      "change_classes": [
+        "series_added",
+        "series_growth"
+      ],
+      "expected_violation": true,
+      "guard_exit": 1,
+      "guard_status": "fail",
+      "missing_series": 0,
+      "new_series": 25,
+      "single_snapshot_parse_accepted": true
+    },
+    {
+      "candidate_series": 99,
+      "case": "missing_series",
+      "change_classes": [
+        "series_missing"
+      ],
+      "expected_violation": false,
+      "guard_exit": 0,
+      "guard_status": "warn",
+      "missing_series": 1,
+      "new_series": 0,
+      "single_snapshot_parse_accepted": true
+    },
+    {
+      "candidate_series": 100,
+      "case": "label_value_churn",
+      "change_classes": [
+        "series_added",
+        "series_missing"
+      ],
+      "expected_violation": false,
+      "guard_exit": 0,
+      "guard_status": "warn",
+      "missing_series": 1,
+      "new_series": 1,
+      "single_snapshot_parse_accepted": true
+    },
+    {
+      "candidate_series": 100,
+      "case": "help_change",
+      "change_classes": [
+        "help_changed"
+      ],
+      "expected_violation": false,
+      "guard_exit": 0,
+      "guard_status": "warn",
+      "missing_series": 0,
+      "new_series": 0,
+      "single_snapshot_parse_accepted": true
+    },
+    {
+      "candidate_series": 101,
+      "case": "added_family",
+      "change_classes": [
+        "family_added"
+      ],
+      "expected_violation": false,
+      "guard_exit": 0,
+      "guard_status": "warn",
+      "missing_series": 0,
+      "new_series": 1,
+      "single_snapshot_parse_accepted": true
+    }
+  ],
+  "experiment_version": 1,
+  "limitations": "Synthetic detection experiment only; no runtime speedup, production impact, or promtool equivalence claimed.",
+  "policy": "default, 20% maximum positive net series growth",
+  "prometheus_client_version": "0.25.0",
+  "summary": {
+    "all_oracle_checks_passed": true,
+    "cases": 9,
+    "compatible_cases": 5,
+    "guard_detected_violations": 4,
+    "guard_false_violations": 0,
+    "known_violations": 4,
+    "single_snapshot_detected_violations": 0
+  },
+  "synthetic_input": {
+    "baseline_families": 20,
+    "baseline_series": 100,
+    "series_per_family": 5
+  }
+}

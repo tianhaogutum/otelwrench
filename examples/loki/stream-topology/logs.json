@@ -1,0 +1,32 @@
+{
+  "resourceLogs": [
+    {
+      "resource": {"attributes": [
+        {"key": "route.old", "value": {"stringValue": "x"}},
+        {"key": "route.new", "value": {"stringValue": "u"}}
+      ]},
+      "scopeLogs": [{"logRecords": [{"timeUnixNano": "1700000000000000001", "body": {"stringValue": "synthetic event"}}]}]
+    },
+    {
+      "resource": {"attributes": [
+        {"key": "route.old", "value": {"stringValue": "x"}},
+        {"key": "route.new", "value": {"stringValue": "v"}}
+      ]},
+      "scopeLogs": [{"logRecords": [{"timeUnixNano": "1700000000000000001", "body": {"stringValue": "synthetic event"}}]}]
+    },
+    {
+      "resource": {"attributes": [
+        {"key": "route.old", "value": {"stringValue": "y"}},
+        {"key": "route.new", "value": {"stringValue": "u"}}
+      ]},
+      "scopeLogs": [{"logRecords": [{"timeUnixNano": "1700000000000000001", "body": {"stringValue": "synthetic event"}}]}]
+    },
+    {
+      "resource": {"attributes": [
+        {"key": "route.old", "value": {"stringValue": "y"}},
+        {"key": "route.new", "value": {"stringValue": "v"}}
+      ]},
+      "scopeLogs": [{"logRecords": [{"timeUnixNano": "1700000000000000001", "body": {"stringValue": "synthetic event"}}]}]
+    }
+  ]
+}

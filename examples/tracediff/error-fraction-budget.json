@@ -1,0 +1,7 @@
+{
+  "errorFractionGate": {
+    "maxIncreasePercent": 50,
+    "maxIncreasePercentagePoints": 10,
+    "minSamples": 20
+  }
+}

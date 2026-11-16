@@ -1,0 +1,8 @@
+{
+  "max_series_growth_percent": 10,
+  "policy": {
+    "family_added": "warn",
+    "help_changed": "warn",
+    "series_missing": "fail"
+  }
+}

@@ -1,0 +1,44 @@
+processors:
+  tail_sampling:
+    policies:
+      - name: errors
+        type: status_code
+        status_code: {status_codes: [ERROR]}
+      - name: slow
+        type: latency
+        latency: {threshold_ms: 500, upper_threshold_ms: 700}
+      - name: api
+        type: string_attribute
+        string_attribute: {key: service.name, values: [api]}
+      - name: non-health-errors
+        type: and
+        and:
+          and_sub_policy:
+            - name: error
+              type: status_code
+              status_code: {status_codes: [ERROR]}
+            - name: not-health
+              type: not
+              not:
+                not_sub_policy:
+                  name: health
+                  type: string_attribute
+                  string_attribute: {key: url.path, values: [/health]}
+      - name: never
+        type: not
+        not:
+          not_sub_policy: {name: all, type: always_sample}
+      - name: health-veto
+        type: drop
+        drop:
+          drop_sub_policy:
+            - name: health
+              type: string_attribute
+              string_attribute: {key: url.path, values: [/health]}
+            - name: not-error
+              type: not
+              not:
+                not_sub_policy:
+                  name: error
+                  type: status_code
+                  status_code: {status_codes: [ERROR]}

@@ -1,0 +1,6 @@
+# HELP requests_total Synthetic collision evidence, not production data.
+# TYPE requests_total counter
+requests_total{pod="a",route="/"} 2 1700000000000
+requests_total{pod="b",route="/"} 4 1700000000001
+requests_total{pod="c",route="/health"} 3
+requests_total{pod="d",route="/health"} 3.0
