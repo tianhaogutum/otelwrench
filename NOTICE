@@ -2,11 +2,11 @@ otelwrench
 Copyright 2026 tianhaogutum and otelwrench contributors
 
 This product is licensed under the Apache License, Version 2.0 (see LICENSE).
-It merges ten tools previously developed as separate projects (sentry2otlp,
+It merges eleven tools previously developed as separate projects (sentry2otlp,
 otlp2loki-preview, otlp-prom-namecheck, tracepack, spanmetrics-offline,
-promdiff-guard, tailsim, promcard-trim, alert-flapsim and tracediff); tracepack,
-alert-flapsim and tracediff were originally Node.js tools and are included as
-Python ports. otelwrench is an independent interoperability project and is not
+promdiff-guard, tailsim, promcard-trim, alert-flapsim, tracediff and
+otel-privacy-replay); tracepack, alert-flapsim and tracediff were originally
+Node.js tools and are included as Python ports. otelwrench is an independent interoperability project and is not
 affiliated with or endorsed by OpenTelemetry, the Cloud Native Computing
 Foundation, Prometheus, Grafana Labs (Loki), Sentry, Jaeger or Zipkin. Product
 names only identify interoperable file formats. No upstream implementation code
@@ -61,3 +61,12 @@ otelwrench; it combines promdiff, prom-names and cardinality)
 Original interoperability implementations. Prometheus, OpenTelemetry, Jaeger
 and Zipkin are format and behavioral references; no upstream implementation
 code is incorporated.
+
+-------------------------------------------------------------------------------
+otelwrench privacy (formerly otel-privacy-replay)
+
+Integration adapter that executes an unmodified OpenTelemetry Collector Contrib
+binary (Apache-2.0) supplied by the user or downloaded on explicit request; the
+binary is not bundled. No Collector implementation code is incorporated.
+Dependency license texts (DeepDiff, python-json-pointer, protobuf) are supplied
+in licenses/.

@@ -1,0 +1,13 @@
+forbid: [SYNTHETIC-SECRET, '4111111111111111']
+checks:
+  - name: both log records survive
+    path: $.resourceLogs[*].scopeLogs[*].logRecords[*]
+    op: count
+    value: 2
+  - name: both structured and unstructured bodies are replaced
+    path: $.resourceLogs[*].scopeLogs[*].logRecords[*].body.stringValue
+    op: equals
+    value: '[redacted]'
+  - name: safe log control is unchanged
+    path: $.resourceLogs[*].scopeLogs[*].logRecords[*].attributes.safe
+    op: unchanged

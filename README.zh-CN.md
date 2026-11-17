@@ -84,6 +84,7 @@ uvx otelwrench preflight before.prom after.prom --queries checkout-dashboard.jso
 | | `tailsim` | 在保存的链路上重放尾部采样策略，比较两套策略各保留了什么 | [tailsim](docs/tailsim.md) |
 | **日志** | `loki` | 预览 Loki 如何把 OTLP 日志属性映射为流标签和结构化元数据，并比较两套配置 | [loki](docs/loki.md) |
 | **告警** | `alert-flapsim` | 在保存的 `query_range` 结果上重放告警规则，比较阈值和 `for`/`keep_firing_for` | [alert-flapsim](docs/alert-flapsim.md) |
+| **Collector** | `privacy` | 在版本和 SHA-256 都锁定的真实 Collector 二进制里运行流水线的处理器，检查敏感字段是否真的被去掉（需要 `otelwrench[privacy]`） | [privacy](docs/privacy.md) |
 | **迁移** | `sentry` | 把保存的 Sentry SDK envelope 转成 OTLP JSON 日志和链路，附完整损失清单 | [sentry](docs/sentry.md) |
 
 `otelwrench <命令> --help` 会列出全部子命令和选项。每个命令在 `examples/<命令>/` 下都有可直接运行的示例。
@@ -117,6 +118,18 @@ otelwrench alert-flapsim replay examples/alert-flapsim/query-range.json --config
 otelwrench sentry convert examples/sentry/mixed.envelope --dry-run
 ```
 
+### Collector 隐私回放
+
+`privacy` 会运行真实的 Collector 二进制：先安装 extra，再用 `otelwrench privacy pin` 锁定你已有的二进制，或者显式下载锁定的发布版本。
+
+```sh
+pip install 'otelwrench[privacy]'
+otelwrench privacy install-collector                                               # 显式下载，校验 SHA-256
+otelwrench privacy run --config examples/privacy/collector.yaml --pipeline traces \
+  --sample examples/privacy/traces.pb --expect examples/privacy/privacy-fails.yaml \
+  --out artifacts/privacy                                                          # 退出码 1：敏感信息仍然存在
+```
+
 ## 和现有工具的关系
 
 otelwrench 处理的是你保存下来的文件：`/metrics` 抓取、链路导出、日志批次、`query_range` 结果。
@@ -132,7 +145,7 @@ otelwrench 处理的是你保存下来的文件：`/metrics` 抓取、链路导�
 
 ## 可信度与边界
 
-- **离线，无遥测。** 所有命令都不发起网络连接，输入都是本地文件。
+- **离线，无遥测。** 所有命令都不发起网络连接，输入都是本地文件。两个例外都需要你显式执行：`privacy run` 会启动你锁定的 Collector 二进制，只通过 127.0.0.1 与它通信；`privacy install-collector` 在你运行它时下载锁定的 Collector 发布版本（安装 otelwrench 时绝不会下载）。
 - **不指定输出就只读。** `preflight`、`promdiff`、`cardinality` 只打印结果；需要写文件的命令都要显式给出输出路径，并原子写入。
 - **启发式会标明。** `preflight` 按指标名和标签名匹配查询，并不真正执行 PromQL；改名识别覆盖 OTLP 后缀规则和取值相同的标签改名。开头那个例子是一次合成的升级，用来展示机制，不代表对真实看板的准确率。
 - **有测试。** `tests/` 下有 1,700 多个测试函数；`.github/workflows/ci.yml` 配置为在 Linux 和 macOS、Python 3.11 到 3.14 上运行它们。

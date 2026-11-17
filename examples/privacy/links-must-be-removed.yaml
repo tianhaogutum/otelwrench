@@ -1,0 +1,13 @@
+# A focused expectation that deliberately fails on the accepted 0.72.0 no-op.
+checks:
+  - name: the span survives
+    path: $.resourceSpans[*].scopeSpans[*].spans[*]
+    op: count
+    value: 1
+  - name: links must be removed
+    path: $.resourceSpans[*].scopeSpans[*].spans[*].links[*]
+    op: count
+    value: 0
+  - name: safe control survives
+    path: $.resourceSpans[*].scopeSpans[*].spans[*].attributes.safe
+    op: unchanged

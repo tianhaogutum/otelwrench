@@ -35,3 +35,7 @@ uv.lock
 /out.prom
 /out.prom.mapping.json
 /out.prom.report.json
+
+# otelwrench privacy: locally installed, pinned Collector binary and lock; replay evidence
+.tools/
+/artifacts/

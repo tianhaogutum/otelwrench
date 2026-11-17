@@ -87,6 +87,7 @@ gate that passes until something else changes. Details: [docs/preflight.md](docs
 | | `tailsim` | Replay tail-sampling policies on saved traces and compare what two policies keep | [tailsim](docs/tailsim.md) |
 | **Logs** | `loki` | Preview how Loki maps OTLP log attributes to stream labels and structured metadata; compare profiles | [loki](docs/loki.md) |
 | **Alerts** | `alert-flapsim` | Replay alert rules over a saved `query_range` matrix; compare thresholds and `for`/`keep_firing_for` | [alert-flapsim](docs/alert-flapsim.md) |
+| **Collector** | `privacy` | Run a pipeline's processors in a pinned real Collector binary and check sensitive fields are removed (`otelwrench[privacy]`) | [privacy](docs/privacy.md) |
 | **Migration** | `sentry` | Convert saved Sentry SDK envelopes to OTLP JSON logs and traces with a loss manifest | [sentry](docs/sentry.md) |
 
 `otelwrench <command> --help` lists every subcommand and option. Each command has runnable
@@ -121,6 +122,19 @@ otelwrench alert-flapsim replay examples/alert-flapsim/query-range.json --config
 otelwrench sentry convert examples/sentry/mixed.envelope --dry-run
 ```
 
+### Collector privacy replay
+
+`privacy` runs a real Collector binary: install the extra, then pin a binary you already have
+(`otelwrench privacy pin`) or download the pinned release explicitly.
+
+```sh
+pip install 'otelwrench[privacy]'
+otelwrench privacy install-collector                                               # explicit download, SHA-256 verified
+otelwrench privacy run --config examples/privacy/collector.yaml --pipeline traces \
+  --sample examples/privacy/traces.pb --expect examples/privacy/privacy-fails.yaml \
+  --out artifacts/privacy                                                          # exit 1: secrets survive
+```
+
 ## How it compares
 
 otelwrench works on files you saved: `/metrics` captures, trace exports, log batches,
@@ -138,6 +152,9 @@ replace your collector, backend or query-time linting.
 ## Trust and limits
 
 - **Offline, no telemetry.** No command opens a network connection; inputs are local files.
+  Two exceptions, both explicit: `privacy run` starts the Collector binary you pinned and talks
+  to it only on 127.0.0.1, and `privacy install-collector` downloads the pinned Collector
+  release when you run it (never at install time).
 - **Read-only unless you name an output.** `preflight`, `promdiff` and `cardinality` only print.
   Commands that write take an explicit output path and write atomically.
 - **Heuristics are labelled.** `preflight` matches queries by metric and label name, not by

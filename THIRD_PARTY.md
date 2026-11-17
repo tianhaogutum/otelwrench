@@ -24,6 +24,20 @@ Jaeger, Zipkin or any other project named here.
 | [PyYAML](https://github.com/yaml/pyyaml) (validated: 6.0.3) | MIT ([text](licenses/PyYAML-MIT.txt)); optional bundled LibYAML 0.2.5 in binary wheels: MIT ([text](licenses/LibYAML-MIT.txt)) | `loki` (mapping profiles), `tailsim` (sampling policies; uses the pure-Python SafeLoader), `preflight` (Prometheus rule files given to `--queries`; `safe_load_all`) |
 | [google-re2](https://github.com/google/re2) (validated: 1.1.20251105) | BSD-3-Clause ([text](licenses/google-re2-BSD-3-Clause.txt)) | `loki` (RE2 attribute selectors, matching Loki's regex semantics) |
 
+Optional, `privacy` extra (`pip install 'otelwrench[privacy]'`; also in the `test` extra):
+
+| Package | License | Used by |
+| --- | --- | --- |
+| [DeepDiff](https://github.com/seperman/deepdiff) (validated: 8.6.1) | MIT ([text](licenses/deepdiff-MIT.txt)) | `privacy` (structural diffs and typed equality of Collector output) |
+| [python-json-pointer](https://github.com/stefankoegl/python-json-pointer) (`jsonpointer`, validated: 3.0.0) | BSD-3-Clause ([text](licenses/jsonpointer-BSD-3-Clause.txt)) | `privacy` (RFC 6901 location addresses and `pointer:` expectations) |
+| [jsonpath-ng](https://github.com/h2non/jsonpath-ng) (validated: 1.7.0) | Apache-2.0 | `privacy` (JSONPath expectations) |
+| [opentelemetry-proto](https://github.com/open-telemetry/opentelemetry-python) (validated: 1.38.0) and its dependency [protobuf](https://github.com/protocolbuffers/protobuf) | Apache-2.0; protobuf BSD-3-Clause ([text](licenses/protobuf-BSD-3-Clause.txt)) | `privacy` (official generated OTLP classes for ingestion audits and OTLP/protobuf responses) |
+
+`privacy` also executes an [OpenTelemetry Collector Contrib](https://github.com/open-telemetry/opentelemetry-collector-contrib)
+binary (`otelcol-contrib`, Apache-2.0) that you supply or explicitly download with
+`otelwrench privacy install-collector`. It is never bundled with otelwrench, never downloaded at
+install time, and runs unmodified as a separate process.
+
 `sentry`, `spanmetrics`, `cardinality`, `tracepack`, `tracediff` and `alert-flapsim` use only
 the Python standard library at runtime. Dependency wheels may include their own native
 components and notices; retain those notices if you redistribute the wheels or an installed
@@ -43,7 +57,10 @@ BSD-2-Clause). Build-only tools are [hatchling](https://github.com/pypa/hatch) (
   (`docs/sources/shared/otel.md`, retrieved 2026-11-11, SHA-256
   `be9d44ae00e13ed3773441aaf4e05bfcb6a367715eef7c5561f5c95d30a788d3`). It contains attribute-name
   facts only, no Loki source.
-- All test, example and benchmark fixtures are original synthetic data under Apache-2.0.
+- All test, example and benchmark fixtures are original synthetic data under Apache-2.0. The
+  `privacy` fixtures (`examples/privacy/*.pb`, `*.json`, `*.jsonl`) were produced from wholly
+  synthetic values by the OpenTelemetry Python SDK and Collector 0.72.0 file exporter; see
+  [examples/privacy/PROVENANCE.md](examples/privacy/PROVENANCE.md).
 
 ### Format and behavior references (not dependencies, no code copied)
 
@@ -73,6 +90,7 @@ or used as a dependency by any command.
 - [`otelwrench cardinality` (formerly promcard-trim)](#otelwrench-cardinality-formerly-promcard-trim)
 - [`otelwrench tracepack`, `otelwrench tracediff`, `otelwrench alert-flapsim` (Node.js originals)](#otelwrench-tracepack-otelwrench-tracediff-otelwrench-alert-flapsim-nodejs-originals)
 - [`otelwrench preflight` (new in otelwrench)](#otelwrench-preflight-new-in-otelwrench)
+- [`otelwrench privacy` (formerly otel-privacy-replay)](#otelwrench-privacy-formerly-otel-privacy-replay)
 
 ## `otelwrench sentry` (formerly sentry2otlp)
 
@@ -271,3 +289,29 @@ the `promdiff` parser; PyYAML for rule files given to `--queries`). Prometheus r
 Grafana dashboard JSON are read as file formats only. The example dashboard, rule file and
 `/metrics` captures in `examples/preflight/` describe a fictional service and are original
 synthetic data.
+
+## `otelwrench privacy` (formerly otel-privacy-replay)
+
+An Apache-2.0 integration adapter, previously a separate project by the same authors. It wraps
+an unmodified, version- and SHA-256-pinned OpenTelemetry Collector Contrib executable: all
+OTLP parsing, processor execution (`redaction`, `attributes`, `resource`, `transform`,
+`filter`, `batch`) and serialization happen in that binary. No Collector source is copied,
+translated or reimplemented. The adapter's own code generates a loopback-only Collector
+configuration, compares outputs and evaluates expectations.
+
+| Material | Role | License |
+| --- | --- | --- |
+| [OpenTelemetry Collector Contrib](https://github.com/open-telemetry/opentelemetry-collector-contrib) `otelcol-contrib` (pinned: 0.72.0, darwin/arm64 archive SHA-256 `77777ea9aaa73b5ffb0cf7fef689fdf9826dca1ccaed9cf9666135b38ad06e70`) | Executed as a separate process; supplied by the user or downloaded on request by `install-collector` from the official [releases](https://github.com/open-telemetry/opentelemetry-collector-releases); never bundled | Apache-2.0 |
+| [PyYAML](https://github.com/yaml/pyyaml) 6.0.3 | Runtime dependency; safe YAML loading with duplicate-key and bounded-alias guards added by the adapter | MIT; [licenses/PyYAML-MIT.txt](licenses/PyYAML-MIT.txt) |
+| [jsonpath-ng](https://github.com/h2non/jsonpath-ng) 1.7.0 | `privacy` extra; JSONPath expectations | Apache-2.0 |
+| [python-json-pointer](https://github.com/stefankoegl/python-json-pointer/tree/v3.0.0) 3.0.0 | `privacy` extra; RFC 6901 addresses | BSD-3-Clause; [licenses/jsonpointer-BSD-3-Clause.txt](licenses/jsonpointer-BSD-3-Clause.txt), copied verbatim from `jsonpointer-3.0.0.dist-info/LICENSE.txt` |
+| [DeepDiff](https://pypi.org/project/deepdiff/8.6.1/) 8.6.1 | `privacy` extra; structural diffs and typed equality | MIT; [licenses/deepdiff-MIT.txt](licenses/deepdiff-MIT.txt), copied verbatim from `deepdiff-8.6.1.dist-info/licenses/LICENSE` |
+| [opentelemetry-proto](https://github.com/open-telemetry/opentelemetry-python/releases/tag/v1.38.0) 1.38.0 and protobuf | `privacy` extra; generated OTLP classes for ingestion audits and protobuf responses | Apache-2.0; protobuf BSD-3-Clause ([licenses/protobuf-BSD-3-Clause.txt](licenses/protobuf-BSD-3-Clause.txt)) |
+| OpenTelemetry Python SDK 1.38.0 (`opentelemetry-sdk`, `opentelemetry-exporter-otlp-proto-http`) | Used only by `examples/privacy/generate_fixtures.py` to produce the protobuf fixtures; not an otelwrench dependency | Apache-2.0 |
+
+Prior art surveyed before the tool was built (Collector redaction processor, file exporter,
+testbed and telemetrygen, OTelBin, base14 Scout `config test`, Telflo pipeline tests) and the
+scope decision are kept in [docs/privacy/prior-art.md](docs/privacy/prior-art.md). The
+original project had no NOTICE file; its Apache-2.0 `LICENSE` contained the standard license
+text, the same text as this repository's [LICENSE](LICENSE). The original build backend was
+hatchling 1.27+ (MIT).

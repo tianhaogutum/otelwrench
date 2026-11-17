@@ -1,0 +1,8 @@
+# This privacy policy MUST fail for examples/privacy/collector.yaml at version 0.72.0.
+forbid:
+  - SYNTHETIC-SECRET
+  - '4111111111111111'
+checks:
+  - name: ignored secret must be removed
+    path: $.resourceSpans[*].scopeSpans[*].spans[*].attributes.ignored_secret
+    op: absent

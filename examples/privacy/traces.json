@@ -1,0 +1,137 @@
+{
+  "resourceSpans": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "privacy-fixture"
+            }
+          },
+          {
+            "key": "owner.email",
+            "value": {
+              "stringValue": "SYNTHETIC-SECRET@example.test"
+            }
+          },
+          {
+            "key": "ignored_secret",
+            "value": {
+              "stringValue": "SYNTHETIC-SECRET"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "fixture.SYNTHETIC-SECRET",
+            "version": "1.38.0",
+            "attributes": [
+              {
+                "key": "scope.secret",
+                "value": {
+                  "stringValue": "SYNTHETIC-SECRET"
+                }
+              }
+            ]
+          },
+          "spans": [
+            {
+              "traceId": "583bdb508b49da6d94562ec107db9581",
+              "spanId": "7115cbb88a94e763",
+              "parentSpanId": "",
+              "name": "checkout SYNTHETIC-SECRET",
+              "kind": 1,
+              "startTimeUnixNano": "1794435338075501000",
+              "endTimeUnixNano": "1794435338075532000",
+              "attributes": [
+                {
+                  "key": "card",
+                  "value": {
+                    "stringValue": "4111111111111111"
+                  }
+                },
+                {
+                  "key": "customer.email",
+                  "value": {
+                    "stringValue": "SYNTHETIC-SECRET@example.test"
+                  }
+                },
+                {
+                  "key": "ignored_secret",
+                  "value": {
+                    "stringValue": "SYNTHETIC-SECRET"
+                  }
+                },
+                {
+                  "key": "safe",
+                  "value": {
+                    "stringValue": "control"
+                  }
+                },
+                {
+                  "key": "integer_card",
+                  "value": {
+                    "intValue": "4111111111111111"
+                  }
+                },
+                {
+                  "key": "array_secrets",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "SYNTHETIC-SECRET"
+                        },
+                        {
+                          "stringValue": "public"
+                        },
+                        {
+                          "stringValue": "4111111111111111"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "events": [
+                {
+                  "timeUnixNano": "1794435338075525000",
+                  "name": "event SYNTHETIC-SECRET",
+                  "attributes": [
+                    {
+                      "key": "event.secret",
+                      "value": {
+                        "stringValue": "SYNTHETIC-SECRET"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "links": [
+                {
+                  "traceId": "0000000000000000000000000000007b",
+                  "spanId": "00000000000001c8",
+                  "attributes": [
+                    {
+                      "key": "link.secret",
+                      "value": {
+                        "stringValue": "SYNTHETIC-SECRET"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "status": {
+                "message": "failed SYNTHETIC-SECRET",
+                "code": 2
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

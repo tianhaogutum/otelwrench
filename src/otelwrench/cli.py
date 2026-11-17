@@ -28,7 +28,7 @@ class Command:
     requires: tuple[str, ...] = ()
 
 
-GROUPS = ("Metrics", "Traces", "Logs", "Alerts", "Migration")
+GROUPS = ("Metrics", "Traces", "Logs", "Alerts", "Collector", "Migration")
 
 COMMANDS: tuple[Command, ...] = (
     Command("preflight", "otelwrench.preflight.cli",
@@ -61,6 +61,10 @@ COMMANDS: tuple[Command, ...] = (
     Command("alert-flapsim", "otelwrench.flapsim.cli",
             "Replay alert rules over a saved query_range matrix and compare thresholds and for durations",
             "Alerts"),
+    Command("privacy", "otelwrench.privacy.cli",
+            "Run a pipeline's processors in a pinned real Collector and check sensitive fields are removed",
+            "Collector", extra="privacy",
+            requires=("deepdiff", "jsonpointer", "jsonpath_ng", "opentelemetry.proto", "google.protobuf")),
     Command("sentry", "otelwrench.sentry.cli",
             "Convert saved Sentry SDK envelopes to OTLP JSON logs and traces with a loss manifest",
             "Migration"),
@@ -73,7 +77,7 @@ LEGACY = {
     "sentry2otlp": "sentry", "otlp2loki-preview": "loki", "otlp-prom-namecheck": "prom-names",
     "spanmetrics-offline": "spanmetrics", "promdiff-guard": "promdiff", "promcard-trim": "cardinality",
     "tracepack": "tracepack", "tracediff": "tracediff", "tailsim": "tailsim", "alert-flapsim": "alert-flapsim",
-    "flapsim": "alert-flapsim",
+    "flapsim": "alert-flapsim", "otel-privacy-replay": "privacy",
 }
 
 

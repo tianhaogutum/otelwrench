@@ -1,0 +1,23 @@
+# Assert real behavior, including retained controls. Paths use the typed view,
+# where attributes are keyed by name; raw OTLP remains in output.json.
+checks:
+  - name: one span survives
+    path: $.resourceSpans[*].scopeSpans[*].spans[*]
+    op: count
+    value: 1
+  - name: card string is masked
+    path: $.resourceSpans[*].scopeSpans[*].spans[*].attributes.card.stringValue
+    op: equals
+    value: '****'
+  - name: email attribute is removed
+    path: $.resourceSpans[*].scopeSpans[*].spans[*].attributes['customer.email']
+    op: absent
+  - name: control survives unchanged
+    path: $.resourceSpans[*].scopeSpans[*].spans[*].attributes.safe
+    op: unchanged
+  - name: ignored secret survives unchanged
+    path: $.resourceSpans[*].scopeSpans[*].spans[*].attributes.ignored_secret
+    op: unchanged
+  - name: span name survives unchanged
+    path: $.resourceSpans[*].scopeSpans[*].spans[*].name
+    op: unchanged

@@ -1,0 +1,29 @@
+# This intentionally demonstrates privacy gaps. Exporters/receivers below are
+# never started by replay; only the selected processor list is copied.
+receivers:
+  otlp:
+    protocols:
+      http:
+exporters:
+  otlp/production:
+    endpoint: never-contact.example.test:4317
+processors:
+  redaction/privacy:
+    allowed_keys: [service.name, card, safe, integer_card, array_secrets]
+    ignored_keys: [ignored_secret]
+    blocked_values: ['4[0-9]{12}(?:[0-9]{3})?']
+    summary: debug
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [redaction/privacy]
+      exporters: [otlp/production]
+    logs:
+      receivers: [otlp]
+      processors: [redaction/privacy]
+      exporters: [otlp/production]
+    metrics:
+      receivers: [otlp]
+      processors: [redaction/privacy]
+      exporters: [otlp/production]

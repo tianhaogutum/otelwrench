@@ -35,13 +35,20 @@ clone of the repository (`git clone https://github.com/tianhaogutum/otelwrench`)
 | --- | --- |
 | [`otelwrench alert-flapsim`](alert-flapsim.md) | Replay alert rules over a saved Prometheus `query_range` matrix and compare thresholds and `for`/`keep_firing_for` choices |
 
+## Collector
+
+| Command | Use it to |
+| --- | --- |
+| [`otelwrench privacy`](privacy.md) | Run a pipeline's local processors in an actual version- and SHA-256-pinned Collector binary on synthetic telemetry, and check that sensitive fields are really removed (needs `otelwrench[privacy]` and a Collector binary) |
+
 ## Migration
 
 | Command | Use it to |
 | --- | --- |
 | [`otelwrench sentry`](sentry.md) | Convert saved Sentry SDK envelopes or event JSON into OTLP JSON logs and traces with a complete loss manifest |
 
-Additional reference: [Verifying saved tailsim reports](tailsim/verification.md).
+Additional reference: [Verifying saved tailsim reports](tailsim/verification.md),
+[privacy prior art and scope](privacy/prior-art.md).
 Reproducible experiments live in [`benchmarks/`](../benchmarks/) (`preflight`, `promdiff`, `tailsim`, `cardinality`).
 Third-party attribution is in [THIRD_PARTY.md](../THIRD_PARTY.md).
 
@@ -59,8 +66,10 @@ Third-party attribution is in [THIRD_PARTY.md](../THIRD_PARTY.md).
 | `tracepack` (Node.js) | `otelwrench tracepack` |
 | `tracediff` (Node.js) | `otelwrench tracediff` |
 | `alert-flapsim` (Node.js) | `otelwrench alert-flapsim` |
+| `otel-privacy-replay` | `otelwrench privacy` |
 
 Saved files keep their original formats: reports, bundles, evidence files and manifests
 written by the former tools are read unchanged, and the tool names recorded inside them
 (for example `tool.name: "sentry2otlp"` in a Sentry conversion manifest) are kept for
-compatibility.
+compatibility. `otelwrench privacy` keeps the `.tools/collector.lock.json` lock format and the
+`report.json` evidence layout (`schema_version: 1`).

@@ -15,7 +15,8 @@ authors = [{ name = "tianhaogutum" }]
 keywords = [
     "opentelemetry", "otlp", "prometheus", "observability", "tracing", "metrics",
     "jaeger", "zipkin", "loki", "sentry", "tail-sampling", "spanmetrics",
-    "cardinality", "alerting", "promql", "grafana", "ci",
+    "cardinality", "alerting", "promql", "grafana", "ci", "collector", "redaction",
+    "privacy",
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -46,8 +47,23 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-# Test runner. Everything the tests import (prometheus-client, PyYAML, google-re2) is a core dependency.
-test = ["pytest>=9.0.2"]
+# privacy: diffs, RFC 6901 pointers and JSONPath over real Collector output, plus the official
+# OTLP protobuf classes for ingestion audits. The Collector binary itself is never bundled or
+# downloaded at install time (see docs/privacy.md).
+privacy = [
+    "deepdiff>=8.6.1",
+    "jsonpointer>=3.0.0",
+    "jsonpath-ng>=1.7.0",
+    "opentelemetry-proto>=1.38.0",
+]
+# Test runner plus the privacy extra; everything else the tests import is a core dependency.
+test = [
+    "pytest>=9.0.2",
+    "deepdiff>=8.6.1",
+    "jsonpointer>=3.0.0",
+    "jsonpath-ng>=1.7.0",
+    "opentelemetry-proto>=1.38.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/tianhaogutum/otelwrench"
@@ -90,6 +106,7 @@ replacement = '](https://github.com/tianhaogutum/otelwrench#\1)'
 
 [tool.hatch.build.targets.wheel]
 # Runtime data files inside the package are shipped with it: loki/defaults.json.
+# privacy has no data files; its Collector binary is supplied by the user.
 packages = ["src/otelwrench"]
 
 [tool.hatch.build.targets.sdist]
@@ -121,6 +138,7 @@ exclude = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = ["-ra"]
+markers = ["integration: runs a locally installed, pinned OpenTelemetry Collector (privacy); skipped when absent"]
 
 [tool.ruff]
 target-version = "py311"

@@ -15,7 +15,7 @@ from otelwrench import cli
 # own (tracediff prints its original version; see tests/tracediff), so it is not checked here.
 PORTED = {"tracepack", "tracediff", "alert-flapsim"}
 # argparse commands. preflight is new in otelwrench (no former tool name).
-CORE = ["preflight", "sentry", "loki", "prom-names", "spanmetrics", "promdiff", "tailsim", "cardinality"]
+CORE = ["preflight", "sentry", "loki", "prom-names", "spanmetrics", "promdiff", "tailsim", "cardinality", "privacy"]
 NEW = {"preflight"}
 
 
@@ -44,7 +44,7 @@ def test_overview_lists_every_group_and_command(args, capsys):
 
 
 def test_command_table_shape():
-    assert cli.GROUPS == ("Metrics", "Traces", "Logs", "Alerts", "Migration")
+    assert cli.GROUPS == ("Metrics", "Traces", "Logs", "Alerts", "Collector", "Migration")
     # The hero command is listed first, in the first group of the overview.
     assert cli.COMMANDS[0].name == "preflight" and cli.COMMANDS[0].group == cli.GROUPS[0]
     assert [c.name for c in cli.COMMANDS if c.group == "Traces"] == ["tracepack", "tracediff", "spanmetrics", "tailsim"]
@@ -56,9 +56,11 @@ def test_command_table_shape():
         "prom-names": "otelwrench.promnames.cli", "promdiff": "otelwrench.promdiff.cli",
         "cardinality": "otelwrench.cardinality.cli", "loki": "otelwrench.loki.cli",
         "alert-flapsim": "otelwrench.flapsim.cli", "sentry": "otelwrench.sentry.cli",
+        "privacy": "otelwrench.privacy.cli",
     }
-    # Every dependency is a core dependency: no command needs an extra.
-    assert not any(c.extra or c.requires for c in cli.COMMANDS)
+    # Only privacy needs an extra (DeepDiff, jsonpointer, jsonpath-ng, opentelemetry-proto).
+    assert {c.name: c.extra for c in cli.COMMANDS if c.extra or c.requires} == {"privacy": "privacy"}
+    assert [c.name for c in cli.COMMANDS if c.group == "Collector"] == ["privacy"]
     assert all(c.group in cli.GROUPS and c.summary for c in cli.COMMANDS)
     assert set(cli.LEGACY.values()) == set(cli.BY_NAME) - NEW
     assert not NEW & set(cli.LEGACY)
@@ -91,7 +93,7 @@ def test_help_subcommand_routes_to_tool_help(tool, capsys):
     assert f"usage: otelwrench {tool}" in capsys.readouterr().out
 
 
-@pytest.mark.parametrize("tool", ["preflight", "sentry", "loki", "promdiff", "tailsim", "cardinality"])
+@pytest.mark.parametrize("tool", ["preflight", "sentry", "loki", "promdiff", "tailsim", "cardinality", "privacy"])
 def test_tool_version_names_the_subcommand(tool):
     result = run(tool, "--version")
     assert result.returncode == 0, result.stderr
@@ -113,6 +115,19 @@ def test_unknown_command_suggests_close_match(capsys):
 def test_unknown_legacy_name_points_to_new_command(old, new, capsys):
     assert cli.main([old]) == 2
     assert f"{old} is now 'otelwrench {new}'" in capsys.readouterr().err
+
+
+def test_missing_extra_prints_install_hint(monkeypatch, capsys):
+    command = cli.BY_NAME["privacy"]
+    real = cli._present
+    monkeypatch.setattr(cli, "_present", lambda name: False if name in command.requires else real(name))
+    assert "(needs otelwrench[privacy])" in cli.overview()
+    assert cli.main(["privacy", "run"]) == 2
+    assert "pip install 'otelwrench[privacy]'" in capsys.readouterr().err
+    assert cli.main(["privacy", "--help"]) == 0
+    out = capsys.readouterr().out
+    assert out.startswith("usage: otelwrench privacy ") and "install-collector" in out
+    assert "pip install 'otelwrench[privacy]'" in out
 
 
 def test_unknown_command_without_match(capsys):
@@ -140,6 +155,7 @@ def test_missing_module_reports_not_available(monkeypatch, capsys):
     ("otelwrench.preflight", "preflight"), ("otelwrench.sentry", "sentry"), ("otelwrench.loki", "loki"), ("otelwrench.promnames", "prom-names"),
     ("otelwrench.spanmetrics", "spanmetrics"), ("otelwrench.promdiff", "promdiff"),
     ("otelwrench.tailsim", "tailsim"), ("otelwrench.cardinality", "cardinality"),
+    ("otelwrench.privacy", "privacy"),
 ])
 def test_subpackage_main_routes_through_dispatcher(module, command):
     result = run("--help", module=("-m", module))
@@ -169,6 +185,7 @@ SUBCOMMANDS = {
     "loki": ["preview", "explain", "compare"],
     "alert-flapsim": ["replay", "checkpoint", "compare", "compare-reports", "compare-report-set", "grid", "join"],
     "sentry": ["convert"],
+    "privacy": ["run", "pin", "install-collector"],
 }
 ALL_HELP = [(name, None) for name in SUBCOMMANDS] + [(name, sub) for name, subs in SUBCOMMANDS.items() for sub in subs]
 

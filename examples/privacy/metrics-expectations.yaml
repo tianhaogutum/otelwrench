@@ -1,0 +1,12 @@
+forbid: [SYNTHETIC-SECRET, '4111111111111111']
+checks:
+  - name: both metrics survive
+    path: $.resourceMetrics[*].scopeMetrics[*].metrics[*]
+    op: count
+    value: 2
+  - name: sum card attribute is removed
+    path: $.resourceMetrics[*].scopeMetrics[*].metrics[*].sum.dataPoints[*].attributes.card
+    op: absent
+  - name: safe metric control is unchanged
+    path: $.resourceMetrics[*].scopeMetrics[*].metrics[*].sum.dataPoints[*].attributes.safe
+    op: unchanged

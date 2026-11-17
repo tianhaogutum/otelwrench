@@ -1,0 +1,11 @@
+# Accepted by 0.72.0, but this does not remove links. Replay demonstrates it.
+processors:
+  transform/links:
+    trace_statements:
+      - context: span
+        statements:
+          - set(links, [])
+service:
+  pipelines:
+    traces:
+      processors: [transform/links]

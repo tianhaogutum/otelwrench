@@ -1,0 +1,57 @@
+# Actual upstream OTTL, not Python emulation. Logs/metrics can be scrubbed on the
+# same old pin even though its redaction processor supports only traces.
+processors:
+  transform/privacy:
+    trace_statements:
+      - context: resource
+        statements:
+          - keep_keys(attributes, ["service.name"])
+      - context: scope
+        statements:
+          - set(name, "fixture.sdk")
+          - keep_keys(attributes, [])
+      - context: span
+        statements:
+          - keep_keys(attributes, ["safe", "card"])
+          - replace_pattern(attributes["card"], "4[0-9]{12}(?:[0-9]{3})?", "****")
+          - set(name, "checkout")
+          - set(status.message, "failed")
+      - context: spanevent
+        statements:
+          - set(name, "event")
+          - keep_keys(attributes, [])
+    log_statements:
+      - context: resource
+        statements:
+          - keep_keys(attributes, ["service.name"])
+      - context: scope
+        statements:
+          - set(name, "fixture.logs")
+          - keep_keys(attributes, [])
+      - context: log
+        statements:
+          - set(body, "[redacted]")
+          - keep_keys(attributes, ["safe"])
+    metric_statements:
+      - context: resource
+        statements:
+          - keep_keys(attributes, ["service.name"])
+      - context: scope
+        statements:
+          - set(name, "fixture.metrics")
+          - keep_keys(attributes, [])
+      - context: metric
+        statements:
+          - replace_pattern(name, "SYNTHETIC-SECRET", "redacted")
+          - set(description, "synthetic metric")
+      - context: datapoint
+        statements:
+          - keep_keys(attributes, ["safe"])
+service:
+  pipelines:
+    traces:
+      processors: [transform/privacy]
+    logs:
+      processors: [transform/privacy]
+    metrics:
+      processors: [transform/privacy]
