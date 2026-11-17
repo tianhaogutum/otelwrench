@@ -260,15 +260,15 @@ upstream NOTICE applies because no upstream implementation source was copied.
 
 The original NOTICE files read:
 
-> tracepack — Copyright 2026 tracepack contributors. Original interoperability
+> tracepack — Copyright 2026 tianhaogutum. Original interoperability
 > implementation. Upstream project names describe compatible file formats and do not imply
 > endorsement. No upstream code is reused.
 
-> tracediff — Copyright 2026 tracediff contributors. Original interoperability
+> tracediff — Copyright 2026 tianhaogutum. Original interoperability
 > implementation. No upstream implementation code is included. OpenTelemetry Protocol and
 > Jaeger are format references.
 
-> alert-flapsim — Copyright 2026 alert-flapsim contributors. Original interoperability
+> alert-flapsim — Copyright 2026 tianhaogutum. Original interoperability
 > implementation. Prometheus is a format and behavioral reference; no Prometheus
 > implementation code is incorporated.
 
